@@ -1,0 +1,40 @@
+# Kravinoffs Agency Global Robots Specification
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Specialized Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI Crawlers for AEO (Answer Engine Optimization) & GEO (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Global Sitemap
+Sitemap: https://kravinoffs.agency/sitemap.xml
+Sitemap: https://kravinoffs.com/sitemap.xml

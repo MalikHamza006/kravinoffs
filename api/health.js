@@ -1,0 +1,19 @@
+export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  return res.status(200).json({
+    status: 'healthy',
+    system: 'Kravinoffs Agency Serverless Core',
+    environment: process.env.VERCEL_ENV || 'production',
+    region: process.env.VERCEL_REGION || 'auto',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime ? process.uptime() : null,
+    version: '2.0.0'
+  });
+}
