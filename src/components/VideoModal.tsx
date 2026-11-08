@@ -270,17 +270,28 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
           {/* Modal Footer */}
           <div className="p-4 sm:p-6 bg-obsidian-950/90 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
             <span className="text-xs font-mono text-chrome-400">
-              Kravinoffs Visual Production Studio • Full-Funnel Creative Engine
+              Kravinoffs Cinema Labs • 8K RED Fleet • Verified 5.4x ROAS Engine
             </span>
 
-            <Link
-              to="/contact"
-              onClick={onClose}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-white text-black hover:bg-chrome-100 font-mono text-xs uppercase tracking-wider font-semibold transition-all shadow-lg shadow-white/10"
-            >
-              Commission Commercial Campaign
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
+            <div className="flex items-center gap-3 w-full sm:w-auto">
+              <a
+                href={`https://wa.me/923160442304?text=${encodeURIComponent(`Hello Hamza! I'm interested in commissioning a campaign similar to "${video.title}" for my brand.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/25 text-xs font-semibold uppercase tracking-wider transition-all"
+              >
+                <span>WhatsApp Founder</span>
+              </a>
+
+              <Link
+                to="/contact"
+                onClick={onClose}
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-semibold uppercase tracking-wider transition-all shadow-lg shadow-white/10 hover:scale-[1.02]"
+              >
+                <span>Commission Campaign</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -17,7 +17,7 @@ export const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="relative min-h-screen bg-obsidian-950 text-chrome-200 selection:bg-white selection:text-black">
+      <div className="relative min-h-screen bg-obsidian-950 text-chrome-200 selection:bg-white selection:text-black overflow-x-hidden w-full max-w-full">
         <Navbar />
         <main>
           <Routes>

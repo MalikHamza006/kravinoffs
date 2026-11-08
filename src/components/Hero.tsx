@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
       <div className="absolute -left-24 bottom-10 w-[450px] h-[450px] bg-white/[0.02] rounded-full blur-[140px] pointer-events-none" />
 
       {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center my-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center my-auto relative z-10">
         
         {/* Left Column: Proportional Typography & Multi-Page Action Triggers */}
         <div className="lg:col-span-7 flex flex-col justify-center text-left">
@@ -24,10 +24,10 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono tracking-widest text-chrome-300 uppercase mb-6 self-start"
+            className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-[10px] sm:text-xs font-mono tracking-wider sm:tracking-widest text-chrome-300 uppercase mb-5 self-start max-w-full"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>ENTERPRISE SOFTWARE • 8K CINEMA • PERFORMANCE MARKETING</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span className="truncate">SOFTWARE • 8K CINEMA • MARKETING</span>
           </motion.div>
 
           {/* Balanced Editorial Headline (Harmonized with sculpture scale) */}
@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-heading text-4xl sm:text-6xl lg:text-[3.8rem] xl:text-[4.4rem] font-bold tracking-tight leading-[1.05] text-white uppercase mb-6"
+            className="font-heading text-3xl sm:text-5xl lg:text-[3.8rem] xl:text-[4.4rem] font-bold tracking-tight leading-[1.08] text-white uppercase mb-5"
           >
             ENGINEERED TO LEAD. <br />
             <span className="text-gradient-silver">BUILT TO SCALE.</span> <br />
@@ -147,13 +147,13 @@ export const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="max-w-7xl mx-auto px-6 sm:px-8 w-full pt-8 border-t border-white/[0.08] mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+        className="max-w-7xl mx-auto px-4 sm:px-8 w-full pt-8 border-t border-white/[0.08] mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
       >
         <div className="text-[11px] font-mono tracking-[0.2em] text-neutral-400 uppercase shrink-0">
           TRUSTED BY <br className="hidden sm:inline" />GLOBAL ENTERPRISES & INNOVATORS
         </div>
 
-        <div className="flex flex-wrap items-center gap-8 sm:gap-12 opacity-70 hover:opacity-100 transition-opacity">
+        <div className="flex flex-wrap items-center gap-4 sm:gap-10 opacity-70 hover:opacity-100 transition-opacity">
           <span className="font-heading font-bold text-sm tracking-widest text-neutral-300 uppercase">
             APEX CAPITAL
           </span>
