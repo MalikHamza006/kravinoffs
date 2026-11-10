@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-chrome-300 max-w-sm leading-relaxed font-normal">
-              Kravinoffs is an international creative technology and digital growth company. We engineer custom enterprise software, execute algorithmic performance marketing, and produce cinematic visual media.
+              Kravinoffs engineers mission-critical enterprise software and broadcast-grade commercial cinema. Built for scale, delivered without compromise.
             </p>
 
             <div className="pt-2 text-xs text-chrome-400 flex items-center gap-2">
@@ -109,11 +109,11 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contact@kravinoffs.agency"
+                  href="mailto:hamzamalik789890@gmail.com"
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Mail className="w-3.5 h-3.5 shrink-0" />
-                  <span>contact@kravinoffs.agency</span>
+                  <span>hamzamalik789890@gmail.com</span>
                 </a>
               </li>
               <li>

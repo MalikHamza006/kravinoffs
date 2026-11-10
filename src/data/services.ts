@@ -4,120 +4,86 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'software-dev',
     number: '01',
-    title: 'Software Development',
-    shortDesc: 'We engineer powerful, scalable, and intuitive digital solutions that help businesses operate smarter and grow faster.',
-    detailedInfo: 'From high-concurrency web applications to custom ERP systems, we combine modern software engineering with sleek user interfaces. Our solutions are built with clean code architecture, automated testing, and enterprise-grade cloud deployment.',
+    title: 'Enterprise Software & Cloud Systems',
+    shortDesc: 'Mission-critical web, desktop, and distributed cloud applications engineered for extreme performance and scale.',
+    detailedInfo: 'We architect type-safe, resilient software systems designed for high availability and low latency.',
     keyOfferings: [
-      'Custom Website Development',
-      'Web Application Development',
-      'Business Management Systems',
-      'POS Systems',
-      'CRM & ERP Solutions',
-      'E-commerce Development',
-      'Custom Dashboards',
-      'API Development & Integration',
-      'Database Design',
-      'SaaS Product Development',
-      'UI/UX Design',
-      'Website Maintenance'
+      'Custom Enterprise Platforms',
+      'High-Frequency Systems & APIs',
+      'Cloud Architecture & DevOps',
+      'Fintech & Trading Terminals'
     ],
     image: '/assets/software-dev.jpg',
     category: 'technology',
-    kpi: '99.9% Uptime & Sub-Second Latency',
-    timeline: 'Sprint Delivery (2 - 6 Weeks)'
-  },
-  {
-    id: 'digital-marketing',
-    number: '02',
-    title: 'Digital Marketing',
-    shortDesc: 'We develop data-driven digital strategies that increase brand awareness, attract potential customers, and generate meaningful business growth.',
-    detailedInfo: 'We combine rigorous search engine optimization with high-converting inbound marketing architectures. Every campaign is designed to capture high-intent prospective buyers and turn them into loyal repeat clients.',
-    keyOfferings: [
-      'Digital Marketing Strategy',
-      'Search Engine Optimization (SEO)',
-      'Search Engine Marketing (SEM)',
-      'Google Business Profile Optimization',
-      'Lead Generation',
-      'Conversion Optimization',
-      'Marketing Analytics',
-      'Brand Positioning',
-      'Campaign Strategy'
-    ],
-    image: '/assets/digital-marketing.jpg',
-    category: 'marketing',
-    kpi: 'Top 3 SERP Ranking & 4x Lead Velocity',
-    timeline: 'Agile 30-Day Growth Cycles'
-  },
-  {
-    id: 'social-media',
-    number: '03',
-    title: 'Social Media Marketing',
-    shortDesc: 'We help brands build a powerful social presence through strategic content, consistent communication, and engaging social media experiences.',
-    detailedInfo: 'Building an authoritative digital footprint requires distinct visual storytelling. We curate aesthetic content feeds, craft viral short-form reels, and execute targeted community outreach across all major social networks.',
-    keyOfferings: [
-      'Social Media Management',
-      'Instagram Marketing',
-      'Facebook Marketing',
-      'TikTok Marketing',
-      'LinkedIn Marketing',
-      'Content Planning',
-      'Creative Post Design',
-      'Reels & Short-Form Content',
-      'Community Management',
-      'Social Media Strategy',
-      'Monthly Content Calendars'
-    ],
-    image: '/assets/social-media.jpg',
-    category: 'marketing',
-    kpi: 'Organic Reach & Brand Authority',
-    timeline: 'Monthly Content Retainers'
-  },
-  {
-    id: 'paid-advertising',
-    number: '04',
-    title: 'Paid Advertising',
-    shortDesc: 'Reach the right audience with strategically managed advertising campaigns designed to generate leads, increase conversions, and maximize marketing efficiency.',
-    detailedInfo: 'We eliminate guesswork in ad spend. Leveraging predictive audience modeling, high-converting creative ad variations, and rigorous multivariate split-testing across Meta, Google, and TikTok to yield maximum ROAS.',
-    keyOfferings: [
-      'Meta Ads (Facebook & Instagram)',
-      'Google Ads',
-      'YouTube Advertising',
-      'TikTok Ads',
-      'Campaign Setup',
-      'Audience Research',
-      'Retargeting Campaigns',
-      'Ad Creative Strategy',
-      'Conversion Tracking',
-      'Performance Optimization',
-      'Campaign Reporting'
-    ],
-    image: '/assets/ads-running.jpg',
-    category: 'marketing',
-    kpi: 'Targeted High-ROAS Performance',
-    timeline: 'Immediate Launch & Continuous Tuning'
+    kpi: '99.999% SLA • Sub-30ms Latency',
+    timeline: 'Agile Sprint Releases'
   },
   {
     id: 'video-production',
-    number: '05',
-    title: 'Video Production',
-    shortDesc: 'We transform stories and ideas into visually compelling videos that capture attention, communicate value, and leave lasting impressions.',
-    detailedInfo: 'Visual media creates instant emotional conviction. We produce cinema-grade commercial advertisements, brand films, product showcases, and dynamic 3D motion graphics utilizing cutting-edge cinema rigs and precision post-production.',
+    number: '02',
+    title: '8K Cinema & Commercial Video',
+    shortDesc: 'Broadcast-grade cinematic commercials, 3D CGI procedural animations, and high-conversion visual storytelling.',
+    detailedInfo: 'High-end cinema camera systems, Hollywood-standard post-production, and photoreal 3D motion.',
     keyOfferings: [
-      'Corporate Videos',
-      'Promotional Videos',
-      'Commercial Advertisements',
-      'Social Media Reels',
-      'Product Videos',
-      'Brand Films',
-      'Event Coverage',
-      'Cinematic Video Editing',
-      'Motion Graphics',
-      'Color Grading',
-      'Post-Production'
+      '8K Cinema Commercials',
+      '3D Motion & CGI Visuals',
+      'Product Reveal Films',
+      'Color Grading & Audio Engineering'
     ],
     image: '/assets/video-production.jpg',
     category: 'creative',
-    kpi: 'Cinema Standard 4K/8K Deliverables',
-    timeline: 'Pre-Production to Master (2 - 4 Weeks)'
+    kpi: '8K RAW • Broadcast Certified',
+    timeline: '10–20 Day Turnaround'
+  },
+  {
+    id: 'paid-advertising',
+    number: '03',
+    title: 'Algorithmic Growth & Paid Media',
+    shortDesc: 'Predictive media buying and performance marketing engineered for verified return on ad spend.',
+    detailedInfo: 'Precision multi-channel performance advertising driven by real-time attribution and multivariate creative testing.',
+    keyOfferings: [
+      'Meta & Google Ads Management',
+      'Dynamic Retargeting Funnels',
+      'Omnichannel Attribution Modeling',
+      'Creative Optimization Testing'
+    ],
+    image: '/assets/ads-running.jpg',
+    category: 'marketing',
+    kpi: '5.4x Verified Benchmark ROAS',
+    timeline: 'Continuous Optimization'
+  },
+  {
+    id: 'digital-marketing',
+    number: '04',
+    title: 'Digital Strategy & Search Dominance',
+    shortDesc: 'Technical SEO and strategic inbound funnels that capture high-intent enterprise pipeline.',
+    detailedInfo: 'Enterprise SEO architectures and market positioning strategies tailored for sustained organic dominance.',
+    keyOfferings: [
+      'Technical SEO Audits',
+      'Enterprise SERP Dominance',
+      'High-Intent Lead Capture',
+      'Conversion Rate Optimization'
+    ],
+    image: '/assets/digital-marketing.jpg',
+    category: 'marketing',
+    kpi: 'Top 3 Search Placements',
+    timeline: 'Ongoing Growth Retainers'
+  },
+  {
+    id: 'social-media',
+    number: '05',
+    title: 'Social Authority & Short-Form Content',
+    shortDesc: 'Algorithmic short-form video and brand curation engineered to build durable market authority.',
+    detailedInfo: 'High-hook visual storytelling across vertical video platforms built to convert audience attention into brand equity.',
+    keyOfferings: [
+      '9:16 Algorithmic Reels & TikToks',
+      'Brand Identity Curation',
+      'Executive Thought Leadership',
+      'Audience Engagement Systems'
+    ],
+    image: '/assets/social-media.jpg',
+    category: 'marketing',
+    kpi: '70M+ Organic Brand Impressions',
+    timeline: 'Monthly Content Retainers'
   }
 ];

@@ -44,6 +44,8 @@ export interface SoftwareProject {
   slug: string;
   client: string;
   category: string;
+  type?: string;
+  quality?: string;
   status: string;
   completionYear: string;
   shortDesc: string;
@@ -70,6 +72,8 @@ export interface VideoProject {
   title: string;
   brand: string;
   category: string;
+  type?: string;
+  quality?: string;
   aspectRatio: '16:9' | '9:16';
   duration: string;
   resolution: string;

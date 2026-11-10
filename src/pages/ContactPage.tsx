@@ -321,7 +321,7 @@ _Dispatched via Kravinoffs Agency Portal_`;
                 </a>
 
                 <a
-                  href="mailto:contact@kravinoffs.agency"
+                  href="mailto:hamzamalik789890@gmail.com"
                   className="flex items-center justify-between p-4 rounded-xl bg-white/[0.02] border border-white/10 hover:border-white/30 hover:bg-white/[0.04] transition-all group"
                 >
                   <div className="flex items-center gap-3">
@@ -330,7 +330,7 @@ _Dispatched via Kravinoffs Agency Portal_`;
                     </div>
                     <div>
                       <div className="text-xs font-mono text-chrome-400">Inquiry Dispatch</div>
-                      <div className="text-sm font-mono text-white font-medium">contact@kravinoffs.agency</div>
+                      <div className="text-sm font-mono text-white font-medium">hamzamalik789890@gmail.com</div>
                     </div>
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-chrome-400 group-hover:text-white transition-colors" />

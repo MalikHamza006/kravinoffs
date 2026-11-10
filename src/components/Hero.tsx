@@ -1,119 +1,114 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code2, Video, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Code2, Video, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from './ui/button';
 
 export const Hero: React.FC = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-[92vh] flex flex-col justify-between pt-32 pb-14 overflow-hidden bg-obsidian-950 text-white"
+      className="relative min-h-[92vh] flex flex-col justify-between pt-32 pb-14 overflow-hidden bg-[#020408] text-white"
     >
-      {/* Dynamic Ambient Background Illumination */}
-      <div className="absolute right-10 top-1/2 -translate-y-1/2 w-[550px] lg:w-[650px] h-[550px] lg:h-[650px] bg-gradient-to-tr from-white/[0.07] via-cyan-500/[0.04] to-transparent rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute -left-24 bottom-10 w-[450px] h-[450px] bg-white/[0.02] rounded-full blur-[140px] pointer-events-none" />
+      {/* Saturated Ambient Lighting Orbs */}
+      <div className="absolute right-10 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/15 rounded-full blur-[150px] pointer-events-none animate-orb-1" />
+      <div className="absolute -left-20 bottom-10 w-[500px] h-[500px] bg-violet-600/12 rounded-full blur-[140px] pointer-events-none animate-orb-2" />
 
-      {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center my-auto relative z-10">
+      {/* Main Content Area: Left Text + Right 3D Sculpture Image (Without BG) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center my-auto relative z-10">
         
-        {/* Left Column: Proportional Typography & Multi-Page Action Triggers */}
+        {/* Left Column: Systems Limited Minimal Authority */}
         <div className="lg:col-span-7 flex flex-col justify-center text-left">
           
-          {/* Eyebrow Pill Label */}
+          {/* Eyebrow Label */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-[10px] sm:text-xs font-mono tracking-wider sm:tracking-widest text-chrome-300 uppercase mb-5 self-start max-w-full"
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/15 text-xs font-mono tracking-widest text-cyan-300 uppercase mb-6 self-start shadow-sm"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-            <span className="truncate">SOFTWARE • 8K CINEMA • MARKETING</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10B981]" />
+            <span>ENTERPRISE ENGINEERING & HIGH-IMPACT MEDIA</span>
           </motion.div>
 
-          {/* Balanced Editorial Headline (Harmonized with sculpture scale) */}
+          {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-heading text-3xl sm:text-5xl lg:text-[3.8rem] xl:text-[4.4rem] font-bold tracking-tight leading-[1.08] text-white uppercase mb-5"
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-heading text-4xl sm:text-6xl lg:text-[4.2rem] font-bold tracking-tight leading-[1.05] text-white uppercase mb-6 drop-shadow-xl"
           >
-            ENGINEERED TO LEAD. <br />
-            <span className="text-gradient-silver">BUILT TO SCALE.</span> <br />
-            TESTED UNDER FIRE.
+            BUILT FOR SCALE. <br />
+            <span className="text-gradient-cyan">ENGINEERED TO LEAD.</span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle — 1 Concise High-Contrast Sentence */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg text-chrome-300 max-w-xl leading-relaxed font-normal mb-8"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-base sm:text-xl text-slate-200 max-w-xl leading-relaxed font-normal mb-8"
           >
-            Kravinoffs builds mission-critical web & desktop applications, produces broadcast-grade commercial cinema, and executes algorithmic paid marketing systems that dominate competitive markets.
+            We build mission-critical enterprise software and produce broadcast-tier commercial cinema. Minimal overhead, maximum impact.
           </motion.p>
 
-          {/* Dual Multi-Page Action Buttons */}
+          {/* Dual Action Triggers with Shadcn Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-wrap items-center gap-4"
           >
-            {/* Primary Action Button */}
+            <Link to="/software-portfolio">
+              <Button variant="glow" size="lg" className="gap-2.5 font-bold">
+                <Code2 className="w-4 h-4" />
+                <span>Software Systems</span>
+              </Button>
+            </Link>
+
+            <Link to="/video-portfolio">
+              <Button variant="cyber" size="lg" className="gap-2.5 font-bold">
+                <Video className="w-4 h-4 text-cyan-400" />
+                <span>Video & Media</span>
+              </Button>
+            </Link>
+
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 font-semibold text-xs tracking-wider uppercase transition-all duration-200 shadow-xl shadow-white/10 hover:scale-105 active:scale-95 group"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-slate-300 hover:text-white px-4 py-3 transition-colors font-semibold"
             >
-              <span>Work With Us</span>
-              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </Link>
-
-            {/* Software Portfolio Button */}
-            <Link
-              to="/software-portfolio"
-              className="inline-flex items-center gap-2.5 px-6 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/15 hover:border-white/30 font-medium text-xs tracking-wider uppercase transition-all duration-200"
-            >
-              <Code2 className="w-4 h-4 text-chrome-300" />
-              <span>Software Builds</span>
-            </Link>
-
-            {/* Video Showcase Button */}
-            <Link
-              to="/video-portfolio"
-              className="inline-flex items-center gap-2.5 px-6 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/15 hover:border-white/30 font-medium text-xs tracking-wider uppercase transition-all duration-200"
-            >
-              <Video className="w-4 h-4 text-emerald-400" />
-              <span>Video & ROAS</span>
+              <span>Get in Touch</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </motion.div>
 
-          {/* Trust Guarantees */}
+          {/* Verified Metrics Strip */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex items-center gap-6 mt-8 pt-6 border-t border-white/[0.08] text-xs font-mono text-chrome-400"
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="flex flex-wrap items-center gap-5 mt-10 pt-6 border-t border-white/15 text-xs font-mono text-slate-300"
           >
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Zero-Downtime SLA</span>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span className="text-white font-semibold">99.999% SLA Uptime</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-              <span>8K RED / ARRI Optics</span>
+            <div>•</div>
+            <div>
+              <span className="text-white font-semibold">Sub-30ms P99 Latency</span>
             </div>
-            <div className="hidden sm:flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-white" />
-              <span>5.4x Verified Avg ROAS</span>
+            <div>•</div>
+            <div>
+              <span className="text-white font-semibold">8K RED Monstro Fleet</span>
             </div>
           </motion.div>
 
         </div>
 
         {/* Right Column: Floating 3D Liquid Chrome Sculpture (Background Removed) */}
-        <div className="lg:col-span-5 flex items-center justify-center relative">
-          {/* Subtle Ambient Radial Backlight Glow for the sculpture */}
-          <div className="absolute inset-0 bg-radial-glow opacity-40 blur-3xl pointer-events-none" />
+        <div className="lg:col-span-5 flex items-center justify-center relative mt-8 lg:mt-0">
+          {/* Subtle Ambient Radial Backlight Glow */}
+          <div className="absolute inset-0 bg-cyan-500/15 opacity-50 blur-3xl pointer-events-none rounded-full" />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -124,50 +119,47 @@ export const Hero: React.FC = () => {
               rotate: [-1, 1, -1]
             }}
             transition={{ 
-              opacity: { duration: 0.9 },
-              scale: { duration: 0.9 },
+              opacity: { duration: 0.8 },
+              scale: { duration: 0.8 },
               y: { repeat: Infinity, duration: 6, ease: "easeInOut" },
               rotate: { repeat: Infinity, duration: 8, ease: "easeInOut" }
             }}
-            className="relative w-full max-w-[400px] sm:max-w-[440px] lg:max-w-[480px] aspect-square flex items-center justify-center"
+            className="relative w-full max-w-[380px] sm:max-w-[440px] aspect-square flex items-center justify-center"
           >
-            {/* Pure transparent PNG with zero background artifact */}
+            {/* Pure transparent PNG without background */}
             <img
               src="/assets/hero-sculpture.png"
-              alt="Kravinoffs 3D Liquid Chrome Sculpture - Software & Cinema Precision"
-              className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(255,255,255,0.12)] select-none pointer-events-none"
+              alt="Kravinoffs 3D Liquid Chrome Sculpture"
+              className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(6,182,212,0.25)] select-none pointer-events-none"
             />
           </motion.div>
         </div>
 
       </div>
 
-      {/* Bottom Bar: "TRUSTED BY AMBITIOUS BRANDS" */}
+      {/* Bottom Bar: Institutional Trust Strip */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="max-w-7xl mx-auto px-4 sm:px-8 w-full pt-8 border-t border-white/[0.08] mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="max-w-7xl mx-auto px-4 sm:px-8 w-full pt-8 border-t border-white/10 mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
       >
-        <div className="text-[11px] font-mono tracking-[0.2em] text-neutral-400 uppercase shrink-0">
-          TRUSTED BY <br className="hidden sm:inline" />GLOBAL ENTERPRISES & INNOVATORS
+        <div className="text-[11px] font-mono tracking-[0.2em] text-slate-400 uppercase shrink-0 font-semibold">
+          ENTERPRISE ARCHITECTURES & GLOBAL CLIENTELE
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 sm:gap-10 opacity-70 hover:opacity-100 transition-opacity">
-          <span className="font-heading font-bold text-sm tracking-widest text-neutral-300 uppercase">
+        <div className="flex flex-wrap items-center gap-6 sm:gap-10 opacity-80 hover:opacity-100 transition-opacity">
+          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
             APEX CAPITAL
           </span>
-          <span className="font-heading font-bold text-sm tracking-widest text-neutral-300 uppercase">
+          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
             VELOCE HYPERCAR
           </span>
-          <span className="font-heading font-bold text-sm tracking-widest text-neutral-300 uppercase">
+          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
             CYBERSHIELD
           </span>
-          <span className="font-heading font-bold text-sm tracking-widest text-neutral-300 uppercase">
+          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
             NEUROLOGIX
-          </span>
-          <span className="font-heading font-bold text-sm tracking-widest text-neutral-300 uppercase">
-            KRAVITZ RETAIL
           </span>
         </div>
       </motion.div>

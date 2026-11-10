@@ -8,19 +8,51 @@ import { WhyChooseUs } from '../components/WhyChooseUs';
 import { Process } from '../components/Process';
 import { Contact } from '../components/Contact';
 import { softwareProjects } from '../data/softwareProjects';
-import { videoPortfolio, marketingSummary } from '../data/videoPortfolio';
-import { Code2, Video, ArrowRight, Play, Cpu, TrendingUp, Sparkles, ExternalLink } from 'lucide-react';
+import { videoPortfolio } from '../data/videoPortfolio';
+import { Code2, Video, ArrowRight, Play } from 'lucide-react';
+import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
 import { SEO } from '../components/SEO';
+
+const HOME_VIDEO_THEMES = [
+  {
+    themeName: 'Sapphire Azure',
+    cardBg: 'from-[#030d22] via-[#050b18] to-[#010308]',
+    border: 'border-cyan-400/50 hover:border-cyan-300',
+    glow: 'shadow-[0_20px_50px_-10px_rgba(6,182,212,0.4)]',
+    badgeVariant: 'cyan' as const,
+    accentText: 'text-cyan-300',
+    btnVariant: 'cyber' as const
+  },
+  {
+    themeName: 'Cyber Emerald',
+    cardBg: 'from-[#021c13] via-[#04130d] to-[#010308]',
+    border: 'border-emerald-400/50 hover:border-emerald-300',
+    glow: 'shadow-[0_20px_50px_-10px_rgba(16,185,129,0.4)]',
+    badgeVariant: 'emerald' as const,
+    accentText: 'text-emerald-300',
+    btnVariant: 'cyber' as const
+  },
+  {
+    themeName: 'Amethyst Violet',
+    cardBg: 'from-[#170529] via-[#0e0419] to-[#010308]',
+    border: 'border-violet-400/50 hover:border-violet-300',
+    glow: 'shadow-[0_20px_50px_-10px_rgba(139,92,246,0.4)]',
+    badgeVariant: 'violet' as const,
+    accentText: 'text-violet-300',
+    btnVariant: 'cyber' as const
+  }
+];
 
 export const HomePage: React.FC = () => {
   const featuredSoftware = softwareProjects.slice(0, 3);
   const featuredVideos = videoPortfolio.slice(0, 3);
 
   return (
-    <div>
+    <div className="bg-[#020408] text-white selection:bg-cyan-400 selection:text-black">
       <SEO
-        title="Kravinoffs™ | Custom Software, Desktop & Web App Development, 8K Video Production & Marketing"
-        description="Kravinoffs is an elite digital engineering and creative production agency. We engineer custom enterprise software, web apps, desktop applications, cloud SaaS architectures, produce broadcast 8K video commercials, and scale digital marketing with 5.4x ROAS."
+        title="Kravinoffs™ | Enterprise Software Engineering & Broadcast 8K Cinema"
+        description="Kravinoffs engineers mission-critical enterprise software, low-latency financial systems, and broadcast-grade 8K commercial cinema. Minimal overhead, maximum impact."
         canonical="https://kravinoffs.agency/"
       />
       {/* Hero Section */}
@@ -32,92 +64,85 @@ export const HomePage: React.FC = () => {
       {/* Core Services Section */}
       <Services />
 
-      {/* DEDICATED SPOTLIGHT 1: Software & Web Development Showcase */}
-      <section className="py-24 sm:py-32 bg-obsidian-900/60 border-y border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-radial-glow pointer-events-none opacity-30" />
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      {/* SPOTLIGHT 1: Software Systems Showcase */}
+      <section className="py-20 sm:py-28 bg-[#04060d] border-y border-white/10 relative overflow-hidden">
+        {/* Subtle Ambient Backlight */}
+        <div className="absolute top-1/2 left-10 w-[450px] h-[450px] rounded-full bg-cyan-600/10 blur-[140px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-chrome-300 uppercase tracking-widest mb-3">
-                <Code2 className="w-3.5 h-3.5 text-white" />
-                Engineering & Architecture Portfolio
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/15 text-xs font-mono text-cyan-300 uppercase tracking-widest mb-3">
+                <Code2 className="w-3.5 h-3.5 text-cyan-400" />
+                Software Builds
               </div>
-              <h2 className="text-3xl sm:text-5xl font-display font-medium text-white tracking-tight">
-                Software & Cloud Infrastructure
+              <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+                Software & Cloud Systems
               </h2>
-              <p className="text-chrome-300 max-w-xl text-sm sm:text-base mt-2">
-                Mission-critical enterprise software, low-latency fintech terminals, and AI-driven platforms built with zero-compromise engineering.
+              <p className="text-slate-300 max-w-xl text-sm sm:text-base mt-2 font-normal">
+                Low-latency fintech terminals, autonomous AI logistics, and cloud platforms.
               </p>
             </div>
 
-            <Link
-              to="/software-portfolio"
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white hover:text-chrome-200 group px-5 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all self-start md:self-auto"
-            >
-              <span>Explore All Software ({softwareProjects.length})</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Link to="/software-portfolio">
+              <Button variant="outline" size="sm" className="gap-2">
+                <span>All Software ({softwareProjects.length})</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Button>
             </Link>
           </div>
 
-          {/* Software Cards Grid */}
+          {/* Software Cards: Title + Preview + Type + Quality ONLY */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredSoftware.map((project) => (
               <motion.div
                 key={project.id}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="group relative rounded-2xl bg-obsidian-950/80 border border-white/10 overflow-hidden flex flex-col hover:border-white/25 transition-all shadow-xl"
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+                className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f1d] to-[#04070f] border-2 border-white/10 hover:border-cyan-400/40 overflow-hidden flex flex-col transition-all shadow-xl hover:shadow-[0_15px_40px_-10px_rgba(6,182,212,0.3)]"
               >
-                <div className="relative aspect-video overflow-hidden">
+                <div className="relative aspect-video overflow-hidden bg-black">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1d] via-black/20 to-transparent" />
                   <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-0.5 rounded text-[11px] font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md text-white border border-white/15">
-                      {project.category}
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/85 backdrop-blur-md text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5 shadow-md">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      {project.status}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                  <div>
-                    <h3 className="text-lg font-display font-medium text-white group-hover:text-chrome-100 transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-xs text-chrome-300 mt-2 line-clamp-2 leading-relaxed">
-                      {project.shortDesc}
-                    </p>
-                  </div>
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                  <h3 className="text-lg font-display font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    {project.title}
+                  </h3>
 
-                  <div className="space-y-4 pt-3 border-t border-white/5">
-                    {/* Primary Metric */}
-                    <div className="flex items-center justify-between text-xs font-mono">
-                      <span className="text-chrome-400">{project.metrics[0]?.label}:</span>
-                      <span className="text-white font-semibold">{project.metrics[0]?.value}</span>
+                  <div className="space-y-2 pt-2 border-t border-white/10 text-xs font-mono">
+                    <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-between">
+                      <span className="text-slate-400 text-[11px] uppercase">Type:</span>
+                      <span className="text-white font-semibold truncate ml-2">
+                        {project.type || project.category}
+                      </span>
                     </div>
 
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.techStack.slice(0, 4).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-0.5 rounded text-[10px] font-mono bg-white/5 text-chrome-300 border border-white/5"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-between">
+                      <span className="text-slate-400 text-[11px] uppercase">Quality:</span>
+                      <span className="text-emerald-400 font-semibold truncate ml-2">
+                        {project.quality}
+                      </span>
                     </div>
-
-                    <Link
-                      to="/software-portfolio"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs font-mono uppercase tracking-wider border border-white/10 transition-all"
-                    >
-                      View Specs & Architecture
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </Link>
                   </div>
+
+                  <Link to="/software-portfolio" className="w-full">
+                    <Button variant="outline" size="sm" className="w-full gap-2 text-xs">
+                      <span>View System Specs</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -125,120 +150,94 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* DEDICATED SPOTLIGHT 2: Cinematic Video & Growth Marketing Showcase */}
-      <section className="py-24 sm:py-32 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      {/* SPOTLIGHT 2: Cinematic Video Showcase with Video & Media Color Themes */}
+      <section className="py-20 sm:py-28 bg-[#010204] relative overflow-hidden border-b border-white/10">
+        {/* Subtle Ambient Backlight */}
+        <div className="absolute top-1/2 right-10 w-[500px] h-[500px] rounded-full bg-violet-600/10 blur-[150px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-chrome-300 uppercase tracking-widest mb-3">
-                <Video className="w-3.5 h-3.5 text-white" />
-                Visual Production & Performance Engine
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/15 text-xs font-mono text-cyan-300 uppercase tracking-widest mb-3">
+                <Video className="w-3.5 h-3.5 text-cyan-400" />
+                Cinema & Media Showcase
               </div>
-              <h2 className="text-3xl sm:text-5xl font-display font-medium text-white tracking-tight">
-                Cinematic Video & Marketing
+              <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+                Cinematic Video Production
               </h2>
-              <p className="text-chrome-300 max-w-xl text-sm sm:text-base mt-2">
-                Hollywood-grade 8K cinematography, viral short-form hooks, and conversion-optimized performance paid ad creatives.
+              <p className="text-slate-300 max-w-xl text-sm sm:text-base mt-2 font-normal">
+                8K RED cinema, procedural 3D motion, and performance commercials.
               </p>
             </div>
 
-            <Link
-              to="/video-portfolio"
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white hover:text-chrome-200 group px-5 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all self-start md:self-auto"
-            >
-              <span>Explore Video Showcase ({videoPortfolio.length})</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Link to="/video-portfolio">
+              <Button variant="cyber" size="sm" className="gap-2">
+                <span>Explore Video Layers ({videoPortfolio.length})</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Button>
             </Link>
           </div>
 
-          {/* Marketing Highlight Metrics Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-display font-bold text-white">
-                {marketingSummary.totalViewsGenerated}
-              </div>
-              <div className="text-xs font-mono text-chrome-400 uppercase mt-1">Total Verified Views</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-display font-bold text-emerald-400">
-                {marketingSummary.averageROAS}
-              </div>
-              <div className="text-xs font-mono text-emerald-300/80 uppercase mt-1">Average Client ROAS</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-display font-bold text-white">
-                {marketingSummary.totalRevenueGenerated}
-              </div>
-              <div className="text-xs font-mono text-chrome-400 uppercase mt-1">Ad Revenue Scaled</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-4xl font-display font-bold text-white">
-                {marketingSummary.averageAudienceRetention}
-              </div>
-              <div className="text-xs font-mono text-chrome-400 uppercase mt-1">3-Sec Hook Retention</div>
-            </div>
-          </div>
-
-          {/* Video Cards Grid */}
+          {/* Video Cards with identical rich Video & Media color palettes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredVideos.map((video) => (
-              <motion.div
-                key={video.id}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="group relative rounded-2xl bg-obsidian-950/80 border border-white/10 overflow-hidden flex flex-col hover:border-white/25 transition-all shadow-xl"
-              >
-                <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={video.thumbnail}
-                    alt={video.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-white/20 group-hover:bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/30 transition-transform group-hover:scale-110">
-                      <Play className="w-5 h-5 fill-white text-white ml-0.5" />
+            {featuredVideos.map((video, idx) => {
+              const theme = HOME_VIDEO_THEMES[idx % HOME_VIDEO_THEMES.length];
+
+              return (
+                <motion.div
+                  key={video.id}
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+                  className={`group relative rounded-2xl bg-gradient-to-br ${theme.cardBg} border-2 ${theme.border} ${theme.glow} overflow-hidden flex flex-col backdrop-blur-xl transition-all duration-300`}
+                >
+                  <div className="relative aspect-video overflow-hidden bg-black/95">
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-black/60 group-hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/30 transition-all group-hover:scale-110 shadow-xl">
+                        <Play className="w-4 h-4 fill-white group-hover:fill-black text-white group-hover:text-black ml-0.5 transition-colors" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-3 right-3 text-[10px] font-mono text-white px-2.5 py-0.5 rounded-full bg-black/85 backdrop-blur-md border border-white/20 font-semibold">
+                      {video.duration}
                     </div>
                   </div>
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white">
-                    <span className="px-2 py-0.5 rounded bg-black/80 backdrop-blur-md border border-white/10">
-                      {video.category}
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-black/80 backdrop-blur-md border border-white/10">
-                      {video.duration}
-                    </span>
-                  </div>
-                </div>
 
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                  <div>
-                    <h3 className="text-lg font-display font-medium text-white group-hover:text-chrome-100 transition-colors">
+                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                    <h3 className="text-lg font-display font-bold text-white group-hover:text-neutral-100 transition-colors">
                       {video.title}
                     </h3>
-                    <p className="text-xs font-mono text-chrome-400 mt-1">
-                      Brand: <span className="text-chrome-200">{video.brand}</span>
-                    </p>
-                    <p className="text-xs text-chrome-300 mt-2 line-clamp-2 leading-relaxed">
-                      {video.shortDesc}
-                    </p>
-                  </div>
 
-                  <div className="space-y-3 pt-3 border-t border-white/5">
-                    <div className="flex items-center justify-between text-xs font-mono">
-                      <span className="text-chrome-400">Verified Impact:</span>
-                      <span className="text-emerald-400 font-semibold">{video.marketingStats.roas}</span>
+                    {/* Strict Metadata: Type & Quality Styled with Theme Badges */}
+                    <div className="space-y-2 pt-2 border-t border-white/10 text-xs font-mono">
+                      <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-between">
+                        <span className="text-slate-400 text-[11px] uppercase">Type:</span>
+                        <Badge variant={theme.badgeVariant} className="text-[10px] uppercase">
+                          {video.type || video.category}
+                        </Badge>
+                      </div>
+
+                      <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-between">
+                        <span className="text-slate-400 text-[11px] uppercase">Quality:</span>
+                        <span className={`font-semibold truncate ml-2 ${theme.accentText}`}>
+                          {video.quality || video.resolution}
+                        </span>
+                      </div>
                     </div>
 
-                    <Link
-                      to="/video-portfolio"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs font-mono uppercase tracking-wider border border-white/10 transition-all"
-                    >
-                      Watch Film & Case Study
-                      <Play className="w-3 h-3 fill-white" />
+                    <Link to="/video-portfolio" className="w-full">
+                      <Button variant={theme.btnVariant} size="sm" className="w-full gap-2 text-xs font-bold">
+                        <span>Watch Cinema Layer</span>
+                        <Play className="w-3 h-3 fill-current" />
+                      </Button>
                     </Link>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

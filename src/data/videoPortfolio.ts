@@ -6,147 +6,159 @@ export const videoPortfolio: VideoProject[] = [
     title: 'Apex Chrono — The Architecture of Precision',
     brand: 'Apex Haute Horlogerie',
     category: 'Cinematic Commercial',
+    type: 'Luxury Commercial Cinema',
+    quality: '8K RED Monstro Cinema • ProRes 4444',
     aspectRatio: '16:9',
     duration: '01:45',
-    resolution: '8K RED Monstro Cinema',
+    resolution: '8K RED Monstro',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-watchmaker-repairing-a-watch-43224-large.mp4',
     thumbnail: '/assets/video-production.jpg',
-    hookText: 'Time is not measured. It is mastered.',
-    shortDesc: 'A broadcast-tier visual commercial combining macro mechanical photography, anamorphic lens flares, and bespoke orchestral sound design.',
+    hookText: 'Masterpiece Precision',
+    shortDesc: 'Macro cinematography with anamorphic optics.',
     marketingStats: {
-      views: '8.4M Impressions',
+      views: '8.4M Views',
       roas: '5.2x ROAS',
-      ctr: '4.8% Click-Through',
-      conversionLift: '+240% Pre-Orders'
+      ctr: '4.8% CTR',
+      conversionLift: '+240%'
     },
-    campaignOverview: 'Global launch for a $45,000 limited timepiece. Crafted to establish instant luxury provenance and drive private collector reservation lists.',
-    targetAudience: 'Ultra-High-Net-Worth individuals, horology collectors, luxury connoisseurs aged 30-58 across US, UAE, and Switzerland.',
-    distributionChannels: ['YouTube 4K Cinema Ads', 'Meta Prestige Placements', 'Financial Times Digital', 'Private VIP Portals'],
-    creativeDeliverables: ['01:45 Hero Brand Film', '00:30 Broadcast Cutdown', '00:15 Vertical Reels x 4', 'High-Res Still Assets x 25']
+    campaignOverview: 'Global product launch for luxury horology collectors.',
+    targetAudience: 'Global UHNW and collectors.',
+    distributionChannels: ['Cinema Pre-Roll', 'Private Portals'],
+    creativeDeliverables: ['8K Hero Cut', 'Social Adaptations']
   },
   {
     id: 'krv-vid-02',
     title: 'Veloce Hypercar — Midnight Velocity',
     brand: 'Veloce Automotive Labs',
     category: 'Automotive & Cinema',
+    type: 'High-Speed Automotive Film',
+    quality: '4K Cinema Anamorphic • 120 FPS RAW',
     aspectRatio: '16:9',
     duration: '02:15',
     resolution: '4K Cinema Anamorphic',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-car-traveling-on-a-road-at-night-41584-large.mp4',
     thumbnail: '/assets/ads-running.jpg',
-    hookText: '0 to 100 km/h in 1.9 seconds. Zero compromise.',
-    shortDesc: 'High-speed camera choreography shot on closed airport runways featuring gyro-stabilized Russian Arm tracking and spatial binaural engine acoustics.',
+    hookText: '0 to 100 in 1.9s',
+    shortDesc: 'Gyro-stabilized Russian Arm high-speed tracking.',
     marketingStats: {
-      views: '16.8M Organic Views',
-      roas: '6.4x Media Return',
-      ctr: '6.1% Engagement',
-      conversionLift: 'Sold Out (120 units)'
+      views: '16.8M Views',
+      roas: '6.4x ROAS',
+      ctr: '6.1% CTR',
+      conversionLift: 'Sold Out'
     },
-    campaignOverview: 'Product reveal campaign for an electric hypercar concept. Aimed to dismantle conventional perceptions of EV soundscapes and vehicle aggression.',
-    targetAudience: 'Automotive enthusiasts, luxury tech adopters, collectors across North America and Europe.',
-    distributionChannels: ['YouTube Pre-Roll 4K', 'Instagram Viral Launch', 'Formula E Sponsorship Broadcast', 'X/Twitter Trends'],
-    creativeDeliverables: ['02:15 Theatrical Reveal', '00:60 YouTube Hero Cut', '00:20 Dynamic Sound Bites x 6', 'Behind the Build Mini-Doc']
+    campaignOverview: 'Theatrical product reveal campaign.',
+    targetAudience: 'Performance automotive enthusiasts.',
+    distributionChannels: ['YouTube 4K', 'Global Broadcast'],
+    creativeDeliverables: ['Theatrical Film', 'Audio Stems']
   },
   {
     id: 'krv-vid-03',
     title: 'CyberShield — Zero-Trust Security in Motion',
     brand: 'CyberShield Systems Inc.',
     category: '3D Motion & CGI',
+    type: '3D Procedural CGI Animation',
+    quality: '4K Photoreal CGI • Octane / Houdini 60 FPS',
     aspectRatio: '16:9',
     duration: '01:20',
     resolution: '4K Photoreal CGI',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-with-code-31911-large.mp4',
     thumbnail: '/assets/software-dev.jpg',
-    hookText: 'When perimeter security fails, micro-segmentation rules.',
-    shortDesc: 'Hollywood-level 3D procedural animations built in Cinema 4D and Houdini illustrating abstract network packet encryption and threat neutralization.',
+    hookText: 'Zero-Trust Architecture',
+    shortDesc: 'Houdini procedural threat simulation.',
     marketingStats: {
-      views: '3.2M B2B Views',
-      roas: '4.6x Pipeline Value',
-      ctr: '5.4% Demo Requests',
-      conversionLift: '+$14M Enterprise Pipeline'
+      views: '3.2M Views',
+      roas: '4.6x Pipeline',
+      ctr: '5.4% CTR',
+      conversionLift: '+$14M Pipeline'
     },
-    campaignOverview: 'B2B enterprise cybersecurity commercial built to explain complex cloud micro-segmentation to Fortune 500 CISOs and CIOs.',
-    targetAudience: 'Chief Information Security Officers (CISOs), Enterprise IT Directors, Cloud Architects.',
-    distributionChannels: ['LinkedIn Sponsored Video', 'RSA Conference Keynote Screens', 'Direct Account-Based Marketing (ABM)'],
-    creativeDeliverables: ['01:20 Full 3D Architecture Video', '00:30 Explainer Cutdowns x 3', 'Interactive WebGL 3D Assets']
+    campaignOverview: 'Enterprise security 3D explainer.',
+    targetAudience: 'Fortune 500 CISOs and CIOs.',
+    distributionChannels: ['Keynote Displays', 'Direct ABM'],
+    creativeDeliverables: ['3D Master Film', 'Cutdowns']
   },
   {
     id: 'krv-vid-04',
     title: 'Quantum Drop — Streetwear Midnight Drop',
     brand: 'Kravitz Street Couture',
     category: 'Viral Short-Form & Reels',
+    type: 'Viral Algorithmic Short-Form',
+    quality: '4K UHD Vertical 9:16 • 60 FPS ProRes',
     aspectRatio: '9:16',
     duration: '00:38',
     resolution: '4K Vertical UHD',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-model-walking-on-a-runway-at-a-fashion-show-42045-large.mp4',
     thumbnail: '/assets/social-media.jpg',
-    hookText: 'Drop 04 goes live in 10 seconds. Blink and you miss.',
-    shortDesc: 'High-energy, fast-cut vertical video engineered specifically for Instagram Reels & TikTok algorithms with sound-synced transitions and micro-pacing.',
+    hookText: 'Instant Drop Teaser',
+    shortDesc: 'Sound-synced algorithmic pacing.',
     marketingStats: {
-      views: '24.5M Views Across TikTok/IG',
-      roas: '7.8x Direct ROAS',
-      ctr: '9.2% Click-Through',
-      conversionLift: 'Entire Inventory Gone in 4 Mins'
+      views: '24.5M Views',
+      roas: '7.8x ROAS',
+      ctr: '9.2% CTR',
+      conversionLift: 'Sold in 4 Mins'
     },
-    campaignOverview: 'Gen-Z streetwear collection launch engineered for exponential virality through trend sound hijacking and anticipation-building countdown teasers.',
-    targetAudience: 'Streetwear enthusiasts, Gen-Z / Millennial trendsetters aged 18-28.',
-    distributionChannels: ['TikTok Organic & Spark Ads', 'Instagram Reels High Hook', 'Snapchat Commercials'],
-    creativeDeliverables: ['9:16 Vertical Reel Master', '15-Sec Story Cutdowns x 8', 'Audio Trend Stem Pack']
+    campaignOverview: 'Gen-Z streetwear viral collection release.',
+    targetAudience: 'Streetwear community.',
+    distributionChannels: ['TikTok', 'Instagram Reels'],
+    creativeDeliverables: ['Vertical Masters', 'Sound Pack']
   },
   {
     id: 'krv-vid-05',
     title: 'NeuralPay — Frictionless Global Money',
     brand: 'NeuralPay Fintech',
     category: 'Performance Paid Ads',
-    aspectRatio: '9:16',
+    type: 'Fintech Product Interface Film',
+    quality: '4K UHD • ProRes 422 HQ',
+    aspectRatio: '16:9',
     duration: '00:45',
-    resolution: '4K Vertical HDR',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-person-holding-a-smartphone-with-a-green-screen-42318-large.mp4',
+    resolution: '4K UHD Broadcast',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smartphone-with-a-green-screen-41130-large.mp4',
     thumbnail: '/assets/digital-marketing.jpg',
-    hookText: 'Send funds to Tokyo or London before your coffee cools down.',
-    shortDesc: 'Direct-response conversion video ad incorporating UGC-style hooks, dynamic screen UI overlays, and compelling psychological value levers.',
+    hookText: 'Instant Settlement',
+    shortDesc: 'Micro-motion UI and macro live interaction.',
     marketingStats: {
-      views: '11.2M Paid Impressions',
-      roas: '4.9x Ad Spend ROAS',
-      ctr: '5.8% App Install Rate',
-      conversionLift: '68,000 App Downloads'
+      views: '9.1M Views',
+      roas: '5.6x ROAS',
+      ctr: '5.8% CTR',
+      conversionLift: '+310% Installs'
     },
-    campaignOverview: 'Direct user acquisition campaign for next-generation borderless banking app. Outperformed client internal creative benchmarks by 320%.',
-    targetAudience: 'Digital nomads, international founders, remote professionals worldwide.',
-    distributionChannels: ['Meta (IG/FB) Advantage+ Campaigns', 'TikTok Paid App Install Ads', 'YouTube Shorts Ads'],
-    creativeDeliverables: ['3 Hook Variations (Problem/Agitate/Solve)', '2 Call-To-Action Outros', 'Multivariate Thumbnail Tests x 12']
+    campaignOverview: 'Performance paid acquisition campaign.',
+    targetAudience: 'Cross-border entrepreneurs.',
+    distributionChannels: ['Google Ads', 'Meta Prestige'],
+    creativeDeliverables: ['Product Demo Film', 'Iterative Hooks']
   },
   {
     id: 'krv-vid-06',
-    title: 'AeroDrone — Autonomous Cinematography',
-    brand: 'AeroDrone Aerospace',
-    category: 'Product Explainers & Tech Demos',
+    title: 'Sovereign Yachting — Riviera Horizon',
+    brand: 'Sovereign Marine Monaco',
+    category: 'Cinematic Commercial',
+    type: 'FPV Cinema & Aerial Production',
+    quality: '8K RED Cinema • FPV Heavy Lift Raw',
     aspectRatio: '16:9',
-    duration: '01:50',
-    resolution: '4K Cinema 60fps',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-drone-flying-over-a-green-mountain-range-42586-large.mp4',
+    duration: '02:30',
+    resolution: '8K Cinema Widescreen',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-luxury-yacht-sailing-in-the-sea-43301-large.mp4',
     thumbnail: '/assets/video-production.jpg',
-    hookText: 'The autonomous aerial filmmaker in your backpack.',
-    shortDesc: 'Cinematic hardware product walkthrough highlighting obstacle-avoidance LiDAR sensors, 8K optical zoom gimbal, and autonomous tracking flight paths.',
+    hookText: 'Uncharted Luxury',
+    shortDesc: 'Licensed FPV cinema drone choreography.',
     marketingStats: {
-      views: '5.9M Video Views',
-      roas: '5.5x Kickstarter Goal',
-      ctr: '7.1% Pre-Order CTR',
-      conversionLift: '$3.8M Raised in 30 Days'
+      views: '5.7M Views',
+      roas: '4.9x ROI',
+      ctr: '4.2% CTR',
+      conversionLift: '3 Charters Booked'
     },
-    campaignOverview: 'Crowdfunding & retail launch film for flagship cinematography drone. Merged breathtaking aerial nature landscapes with crisp product breakdown.',
-    targetAudience: 'Professional filmmakers, content creators, tech early-adopters.',
-    distributionChannels: ['Kickstarter Hero Video', 'YouTube Tech Review Placements', 'Meta Retargeting'],
-    creativeDeliverables: ['01:50 Kickstarter Master Pitch', '00:30 Feature Focus Cuts x 4', 'Retail Display Loop Video']
+    campaignOverview: 'Ultra-luxury Mediterranean yacht charter brand film.',
+    targetAudience: 'HNW yacht charter clients.',
+    distributionChannels: ['Private Screenings', 'Superyacht News'],
+    creativeDeliverables: ['Aerial 8K Master', 'Social Teasers']
   }
 ];
 
 export const marketingSummary: MarketingCampaignSummary = {
-  totalViewsGenerated: '70,000,000+',
-  averageROAS: '5.4x',
-  totalRevenueGenerated: '$48M+',
-  averageAudienceRetention: '84%',
-  videoAssetsProduced: '350+'
+  totalViewsGenerated: '70M+ Views',
+  averageROAS: '5.4x Avg ROAS',
+  totalRevenueGenerated: '$38M+ Attributed',
+  averageAudienceRetention: '78% Completion',
+  videoAssetsProduced: '120+ Master Films'
 };
 
 export const VIDEO_CATEGORIES = [
@@ -155,6 +167,5 @@ export const VIDEO_CATEGORIES = [
   'Automotive & Cinema',
   '3D Motion & CGI',
   'Viral Short-Form & Reels',
-  'Performance Paid Ads',
-  'Product Explainers & Tech Demos'
+  'Performance Paid Ads'
 ];
