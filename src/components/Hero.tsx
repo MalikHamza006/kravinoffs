@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code2, Video, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Code2, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
@@ -14,10 +14,10 @@ export const Hero: React.FC = () => {
       <div className="absolute right-10 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/15 rounded-full blur-[150px] pointer-events-none animate-orb-1" />
       <div className="absolute -left-20 bottom-10 w-[500px] h-[500px] bg-violet-600/12 rounded-full blur-[140px] pointer-events-none animate-orb-2" />
 
-      {/* Main Content Area: Left Text + Right 3D Sculpture Image (Without BG) */}
+      {/* Main Content Area: Left Text + Right 3D Sculpture */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center my-auto relative z-10">
         
-        {/* Left Column: Systems Limited Minimal Authority */}
+        {/* Left Column */}
         <div className="lg:col-span-7 flex flex-col justify-center text-left">
           
           {/* Eyebrow Label */}
@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
             className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/15 text-xs font-mono tracking-widest text-cyan-300 uppercase mb-6 self-start shadow-sm"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10B981]" />
-            <span>ENTERPRISE ENGINEERING & HIGH-IMPACT MEDIA</span>
+            <span>DIGITAL ENGINEERING & CREATIVE PRODUCTION</span>
           </motion.div>
 
           {/* Headline */}
@@ -38,18 +38,18 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-heading text-4xl sm:text-6xl lg:text-[4.2rem] font-bold tracking-tight leading-[1.05] text-white uppercase mb-6 drop-shadow-xl"
           >
-            BUILT FOR SCALE. <br />
-            <span className="text-gradient-cyan">ENGINEERED TO LEAD.</span>
+            WE BUILD DIGITAL EXPERIENCES. <br />
+            <span className="text-gradient-cyan">WE CREATE WHAT'S NEXT.</span>
           </motion.h1>
 
-          {/* Subtitle — 1 Concise High-Contrast Sentence */}
+          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-base sm:text-xl text-slate-200 max-w-xl leading-relaxed font-normal mb-8"
           >
-            We build mission-critical enterprise software and produce broadcast-tier commercial cinema. Minimal overhead, maximum impact.
+            From custom software and business platforms to cinematic video production and performance-driven digital marketing, Lightyear Studios helps businesses turn ideas into meaningful digital experiences.
           </motion.p>
 
           {/* Dual Action Triggers with Shadcn Buttons */}
@@ -77,12 +77,12 @@ export const Hero: React.FC = () => {
               to="/contact"
               className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-slate-300 hover:text-white px-4 py-3 transition-colors font-semibold"
             >
-              <span>Get in Touch</span>
+              <span>Start a Project</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </motion.div>
 
-          {/* Verified Metrics Strip */}
+          {/* Verified Capabilities Strip */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -90,24 +90,25 @@ export const Hero: React.FC = () => {
             className="flex flex-wrap items-center gap-5 mt-10 pt-6 border-t border-white/15 text-xs font-mono text-slate-300"
           >
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span className="text-white font-semibold">99.999% SLA Uptime</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10B981]" />
+              <span className="text-white font-semibold">Custom Software & POS</span>
             </div>
-            <div>•</div>
-            <div>
-              <span className="text-white font-semibold">Sub-30ms P99 Latency</span>
+            <div className="text-slate-500">•</div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#06B6D4]" />
+              <span className="text-white font-semibold">Commercial Video (Up to 4K)</span>
             </div>
-            <div>•</div>
-            <div>
-              <span className="text-white font-semibold">8K RED Monstro Fleet</span>
+            <div className="text-slate-500">•</div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-violet-400 shadow-[0_0_8px_#8B5CF6]" />
+              <span className="text-white font-semibold">Clear Australian AUD Pricing</span>
             </div>
           </motion.div>
 
         </div>
 
-        {/* Right Column: Floating 3D Liquid Chrome Sculpture (Background Removed) */}
+        {/* Right Column: Floating 3D Liquid Chrome Sculpture */}
         <div className="lg:col-span-5 flex items-center justify-center relative mt-8 lg:mt-0">
-          {/* Subtle Ambient Radial Backlight Glow */}
           <div className="absolute inset-0 bg-cyan-500/15 opacity-50 blur-3xl pointer-events-none rounded-full" />
 
           <motion.div
@@ -126,10 +127,9 @@ export const Hero: React.FC = () => {
             }}
             className="relative w-full max-w-[380px] sm:max-w-[440px] aspect-square flex items-center justify-center"
           >
-            {/* Pure transparent PNG without background */}
             <img
               src="/assets/hero-sculpture.png"
-              alt="Kravinoffs 3D Liquid Chrome Sculpture"
+              alt="Lightyear Studios 3D Liquid Chrome Sculpture"
               className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(6,182,212,0.25)] select-none pointer-events-none"
             />
           </motion.div>
@@ -145,22 +145,18 @@ export const Hero: React.FC = () => {
         className="max-w-7xl mx-auto px-4 sm:px-8 w-full pt-8 border-t border-white/10 mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
       >
         <div className="text-[11px] font-mono tracking-[0.2em] text-slate-400 uppercase shrink-0 font-semibold">
-          ENTERPRISE ARCHITECTURES & GLOBAL CLIENTELE
+          LIGHTYEAR STUDIOS • AUSTRALIA & GLOBAL CLIENTELE
         </div>
 
-        <div className="flex flex-wrap items-center gap-6 sm:gap-10 opacity-80 hover:opacity-100 transition-opacity">
-          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
-            APEX CAPITAL
+        <div className="flex flex-wrap items-center gap-6 sm:gap-10 text-xs text-slate-300 font-mono">
+          <span className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            Remote-First Creative & Tech Agency
           </span>
-          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
-            VELOCE HYPERCAR
-          </span>
-          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
-            CYBERSHIELD
-          </span>
-          <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-slate-200 uppercase">
-            NEUROLOGIX
-          </span>
+          <span>•</span>
+          <span>Transparent Fixed-Tier Pricing</span>
+          <span>•</span>
+          <span>Operating Base: Lahore, Pakistan</span>
         </div>
       </motion.div>
     </section>

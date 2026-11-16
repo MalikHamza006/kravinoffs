@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Play, Pause, Volume2, VolumeX, BarChart3, TrendingUp, Target, Share2, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { X, Play, Pause, Volume2, VolumeX, Film, Sparkles, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { VideoProject } from '../types';
 import { Link } from 'react-router-dom';
 
@@ -59,7 +59,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/90 backdrop-blur-xl"
+          className="fixed inset-0 bg-black/85 backdrop-blur-md"
         />
 
         {/* Modal Window */}
@@ -68,58 +68,52 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', duration: 0.4 }}
-          className="relative w-full max-w-5xl bg-obsidian-900 border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col"
+          className="relative w-full max-w-4xl bg-[#0B0F17] border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col"
         >
           {/* Header Bar */}
-          <div className="p-4 sm:p-6 bg-obsidian-950/80 border-b border-white/10 flex items-center justify-between">
+          <div className="p-4 sm:p-6 bg-gradient-to-r from-white/5 via-transparent to-white/5 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <span className="px-2.5 py-0.5 rounded text-xs font-mono uppercase tracking-wider bg-white/10 text-white border border-white/20">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/10 text-cyan-300 border border-white/20">
                 {video.category}
               </span>
               <span className="text-xs font-mono text-chrome-400">
-                Brand: <strong className="text-white font-medium">{video.brand}</strong>
-              </span>
-              <span className="hidden sm:inline-block text-xs font-mono px-2 py-0.5 rounded bg-white/5 text-chrome-300">
-                {video.resolution}
+                Brand: <strong className="text-white">{video.brand}</strong>
               </span>
             </div>
 
             <button
               onClick={onClose}
-              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-chrome-300 hover:text-white transition-colors border border-white/10"
-              aria-label="Close video player"
+              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-chrome-400 hover:text-white transition-colors border border-white/10"
+              aria-label="Close modal"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
-          {/* Modal Body */}
-          <div className="overflow-y-auto p-4 sm:p-6 space-y-6 custom-scrollbar">
-            {/* Cinematic Video Player Frame */}
-            <div className="relative rounded-xl overflow-hidden bg-black border border-white/10 aspect-video group shadow-2xl flex items-center justify-center">
+          {/* Modal Scroll Body */}
+          <div className="p-4 sm:p-6 overflow-y-auto space-y-6">
+            {/* Custom Interactive Video Player */}
+            <div className="relative rounded-xl overflow-hidden bg-black aspect-video max-h-[440px] flex items-center justify-center border border-white/10 group">
               <video
                 ref={videoRef}
                 src={video.videoUrl}
                 poster={video.thumbnail}
-                loop
                 playsInline
+                loop
                 muted={isMuted}
                 onTimeUpdate={handleTimeUpdate}
                 onClick={togglePlay}
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-full object-contain cursor-pointer"
               />
 
-              {/* Video Overlay Controls */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none" />
-
-              {/* Center Play Indicator when paused */}
+              {/* Big Center Play Pause Overlay */}
               {!isPlaying && (
                 <button
                   onClick={togglePlay}
-                  className="absolute p-4 rounded-full bg-white/20 hover:bg-white/30 text-white backdrop-blur-md transition-all scale-100 hover:scale-110 border border-white/30"
+                  className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/75 backdrop-blur-md flex items-center justify-center text-white border border-white/20 hover:scale-110 transition-transform shadow-2xl"
                   aria-label="Play video"
                 >
-                  <Play className="w-8 h-8 fill-white ml-1" />
+                  <Play className="w-8 h-8 fill-white text-white ml-1" />
                 </button>
               )}
 
@@ -128,7 +122,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
                 {/* Scrubber Bar */}
                 <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-white transition-all duration-150"
+                    className="h-full bg-cyan-400 transition-all duration-150"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -152,9 +146,9 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
                     <span className="text-chrome-400">Duration: {video.duration}</span>
                   </div>
 
-                  <div className="flex items-center gap-2 text-chrome-300">
-                    <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-                    <span>{video.aspectRatio === '9:16' ? 'Vertical 9:16 Reel' : 'Cinematic 16:9'}</span>
+                  <div className="flex items-center gap-2 text-chrome-400">
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span>{video.aspectRatio === '9:16' ? 'Vertical 9:16 Reel' : 'Widescreen 16:9'}</span>
                   </div>
                 </div>
               </div>
@@ -162,60 +156,60 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
 
             {/* Title & Hook */}
             <div className="space-y-2">
-              <h2 className="text-2xl sm:text-3xl font-display font-medium text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white tracking-tight">
                 {video.title}
               </h2>
-              <p className="text-sm sm:text-base font-serif italic text-chrome-300 border-l-2 border-white/40 pl-3">
+              <p className="text-sm font-mono text-cyan-300 border-l-2 border-cyan-400 pl-3">
                 "{video.hookText}"
               </p>
             </div>
 
-            {/* Campaign Marketing Data & ROAS Metrics */}
+            {/* Production Specifications */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <BarChart3 className="w-4 h-4 text-white" />
-                <h3 className="text-xs font-mono uppercase tracking-widest text-chrome-400">
-                  Performance Marketing Metrics & Impact
+                <Film className="w-4 h-4 text-cyan-400" />
+                <h3 className="text-xs font-mono uppercase tracking-widest text-cyan-300 font-semibold">
+                  Production Specifications & Formats
                 </h3>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 text-center">
-                  <div className="text-xl sm:text-2xl font-display font-bold text-white">
-                    {video.marketingStats.views}
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+                  <div className="text-sm font-bold text-white font-mono">
+                    {video.marketingStats?.resolution || 'Up to 4K UHD'}
                   </div>
-                  <div className="text-xs font-mono text-chrome-400 mt-1 uppercase">Reach & Impressions</div>
+                  <div className="text-[10px] font-mono text-chrome-400 mt-1 uppercase">Master Resolution</div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-emerald-500/[0.05] border border-emerald-500/20 text-center">
-                  <div className="text-xl sm:text-2xl font-display font-bold text-emerald-400">
-                    {video.marketingStats.roas}
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+                  <div className="text-sm font-bold text-cyan-300 font-mono">
+                    {video.aspectRatio}
                   </div>
-                  <div className="text-xs font-mono text-emerald-300/80 mt-1 uppercase">Campaign ROAS</div>
+                  <div className="text-[10px] font-mono text-chrome-400 mt-1 uppercase">Aspect Ratio</div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 text-center">
-                  <div className="text-xl sm:text-2xl font-display font-bold text-white">
-                    {video.marketingStats.ctr}
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+                  <div className="text-sm font-bold text-white font-mono">
+                    {video.duration}
                   </div>
-                  <div className="text-xs font-mono text-chrome-400 mt-1 uppercase">Click-Through Rate</div>
+                  <div className="text-[10px] font-mono text-chrome-400 mt-1 uppercase">Runtime</div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 text-center">
-                  <div className="text-xl sm:text-2xl font-display font-bold text-white">
-                    {video.marketingStats.conversionLift}
+                <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+                  <div className="text-sm font-bold text-white font-mono">
+                    ProRes & H.264
                   </div>
-                  <div className="text-xs font-mono text-chrome-400 mt-1 uppercase">Conversion Result</div>
+                  <div className="text-[10px] font-mono text-chrome-400 mt-1 uppercase">Export Codecs</div>
                 </div>
               </div>
             </div>
 
-            {/* Marketing Strategy & Campaign Details */}
+            {/* Strategy & Overview */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-5 rounded-xl bg-white/[0.02] border border-white/10 space-y-2">
                 <div className="text-xs font-mono uppercase tracking-wider text-white font-semibold flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-chrome-300" />
-                  Strategic Campaign Concept
+                  <Sparkles className="w-4 h-4 text-cyan-400" />
+                  Campaign Overview
                 </div>
                 <p className="text-xs sm:text-sm text-chrome-300 leading-relaxed">
                   {video.campaignOverview}
@@ -224,8 +218,8 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
 
               <div className="p-5 rounded-xl bg-white/[0.02] border border-white/10 space-y-2">
                 <div className="text-xs font-mono uppercase tracking-wider text-white font-semibold flex items-center gap-2">
-                  <Target className="w-4 h-4 text-chrome-300" />
-                  Target Audience Demographics
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  Target Audience
                 </div>
                 <p className="text-xs sm:text-sm text-chrome-300 leading-relaxed">
                   {video.targetAudience}
@@ -233,65 +227,38 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
               </div>
             </div>
 
-            {/* Distribution Channels & Deliverables */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="text-xs font-mono uppercase tracking-wider text-chrome-400 mb-2.5">
-                  Deployment Channels
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {video.distributionChannels.map((channel, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 rounded-full text-xs font-mono bg-white/5 border border-white/10 text-chrome-200"
-                    >
-                      {channel}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-xs font-mono uppercase tracking-wider text-chrome-400 mb-2.5">
-                  Production Deliverables
-                </h4>
-                <div className="space-y-1.5">
-                  {video.creativeDeliverables.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-chrome-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-white" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* Creative Deliverables */}
+            <div>
+              <h3 className="text-xs font-mono uppercase tracking-widest text-chrome-400 mb-3 font-semibold">
+                Delivered Master Assets
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {video.creativeDeliverables.map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-white"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Modal Footer */}
-          <div className="p-4 sm:p-6 bg-obsidian-950/90 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+          <div className="p-4 sm:p-6 bg-obsidian-950 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
             <span className="text-xs font-mono text-chrome-400">
-              Kravinoffs Cinema Labs • 8K RED Fleet • Verified 5.4x ROAS Engine
+              Commercial Video Production • Lightyear Studios
             </span>
 
-            <div className="flex items-center gap-3 w-full sm:w-auto">
-              <a
-                href={`https://wa.me/923160442304?text=${encodeURIComponent(`Hello Hamza! I'm interested in commissioning a campaign similar to "${video.title}" for my brand.`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/25 text-xs font-semibold uppercase tracking-wider transition-all"
-              >
-                <span>WhatsApp Founder</span>
-              </a>
-
-              <Link
-                to="/contact"
-                onClick={onClose}
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-semibold uppercase tracking-wider transition-all shadow-lg shadow-white/10 hover:scale-[1.02]"
-              >
-                <span>Commission Campaign</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
+            <Link
+              to="/contact"
+              onClick={onClose}
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold font-mono text-xs uppercase tracking-wider transition-all shadow-lg active:scale-95"
+            >
+              <span>Commission Similar Commercial</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-black" />
+            </Link>
           </div>
         </motion.div>
       </div>

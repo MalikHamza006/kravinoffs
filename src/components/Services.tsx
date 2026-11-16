@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 import { servicesData } from '../data/services';
 import { ServiceItem } from '../types';
 import { ServiceModal } from './ServiceModal';
-import { Code, TrendingUp, Share2, Target, Video, ArrowRight } from 'lucide-react';
+import { Code2, Video, TrendingUp, UtensilsCrossed, ShieldAlert, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const iconMap: Record<string, React.ElementType> = {
-  'software-dev': Code,
+  'software-dev': Code2,
+  'restaurant-tech': UtensilsCrossed,
   'video-production': Video,
-  'paid-advertising': Target,
   'digital-marketing': TrendingUp,
-  'social-media': Share2,
+  'technical-consulting': ShieldAlert,
 };
 
 export const Services: React.FC = () => {
@@ -31,7 +31,7 @@ export const Services: React.FC = () => {
               WHAT WE BUILD & DELIVER.
             </h2>
             <p className="text-sm sm:text-base text-chrome-300 mt-2 max-w-xl font-normal">
-              Specialized enterprise engineering, broadcast cinema production, and algorithmic media buying.
+              Specialized software development, hospitality technology, commercial video production, and transparent digital marketing.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export const Services: React.FC = () => {
             to="/services"
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-white hover:text-chrome-200 transition-colors self-start md:self-auto"
           >
-            <span>All Capabilities</span>
+            <span>All Capabilities & Pricing</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -47,7 +47,7 @@ export const Services: React.FC = () => {
         {/* 5 Clean Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicesData.map((service, index) => {
-            const Icon = iconMap[service.id] || Code;
+            const Icon = iconMap[service.id] || Code2;
             return (
               <motion.div
                 key={service.id}
@@ -57,6 +57,7 @@ export const Services: React.FC = () => {
                 whileHover={{ y: -8, scale: 1.015 }}
                 transition={{ type: 'spring', stiffness: 350, damping: 25, delay: index * 0.06 }}
                 className="rounded-2xl p-6 bg-white/[0.02] border border-white/10 hover:border-white/30 flex flex-col justify-between transition-colors shadow-lg hover:shadow-2xl hover:shadow-white/5 group cursor-pointer"
+                onClick={() => setSelectedService(service)}
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
@@ -81,19 +82,22 @@ export const Services: React.FC = () => {
                     {service.keyOfferings.slice(0, 4).map((offering, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs font-mono text-chrome-300">
                         <span className="w-1 h-1 rounded-full bg-emerald-400" />
-                        <span>{offering}</span>
+                        <span className="truncate">{offering}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono">
-                  <span className="text-chrome-400">{service.kpi}</span>
+                  <span className="text-cyan-300 font-semibold">{service.startingPrice}</span>
                   <button
-                    onClick={() => setSelectedService(service)}
-                    className="text-white hover:text-chrome-200 transition-colors"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedService(service);
+                    }}
+                    className="text-white hover:text-chrome-200 transition-colors flex items-center gap-1"
                   >
-                    Details →
+                    <span>Details →</span>
                   </button>
                 </div>
               </motion.div>

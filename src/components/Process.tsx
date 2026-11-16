@@ -8,25 +8,25 @@ export const Process: React.FC = () => {
       step: '01',
       title: 'Discovery',
       icon: Compass,
-      desc: 'Technical audit of existing systems, market positioning, and performance objectives.',
+      desc: 'Understand the business, its core objectives, target audience, technical specifications, and key requirements.',
     },
     {
-      icon: FileCode2,
       step: '02',
-      title: 'Architecture',
-      desc: 'System schema blueprints, UI/UX interaction models, and cinema production storyboards.',
+      title: 'Strategy & Planning',
+      icon: FileCode2,
+      desc: 'Develop the detailed project scope, creative direction, technical system architecture, or monthly marketing roadmap.',
     },
     {
       step: '03',
       title: 'Execution',
       icon: Rocket,
-      desc: 'Agile sprint development, 8K RED filming, and continuous integration pipeline testing.',
+      desc: 'Design, develop, produce commercial video, optimise campaigns, and review deliverables collaboratively with regular feedback.',
     },
     {
       step: '04',
-      title: 'Scale',
+      title: 'Delivery & Growth',
       icon: TrendingUp,
-      desc: 'Production deployment, real-time telemetry monitoring, and ongoing conversion tuning.',
+      desc: 'Launch the digital product, hand over documentation, and provide ongoing technical maintenance and marketing support.',
     },
   ];
 
@@ -40,11 +40,11 @@ export const Process: React.FC = () => {
             Execution Lifecycle
           </div>
           <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase leading-tight mb-4">
-            FROM CONCEPT <br />
-            <span className="text-chrome-400">TO PRODUCTION SLA.</span>
+            FROM INITIAL CONCEPT <br />
+            <span className="text-chrome-400">TO SUCCESSFUL DELIVERY.</span>
           </h2>
           <p className="text-sm sm:text-base text-chrome-300 leading-relaxed font-normal">
-            A linear four-phase execution framework designed for speed, clarity, and zero-defect delivery.
+            A linear four-phase execution framework designed for clarity, transparent communication, and reliable turnaround.
           </p>
         </div>
 

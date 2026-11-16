@@ -10,7 +10,7 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({
       success: false,
-      error: 'Method Not Allowed. Kravinoffs API accepts POST for inquiries.'
+      error: 'Method Not Allowed. Lightyear Studios API accepts POST for inquiries.'
     });
   }
 
@@ -24,7 +24,7 @@ export default function handler(req, res) {
       }
     }
 
-    const { name, email, phone, service, budget, message, timeline } = body;
+    const { name, email, phone, service, budget, projectBudget, message, timeline } = body;
 
     // Validation
     if (!name || typeof name !== 'string' || name.trim().length < 2) {
@@ -37,7 +37,7 @@ export default function handler(req, res) {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return res.status(400).json({
         success: false,
-        error: 'Please provide a valid corporate or professional email address.'
+        error: 'Please provide a valid professional email address.'
       });
     }
 
@@ -49,14 +49,14 @@ export default function handler(req, res) {
     }
 
     // Generate unique inquiry ticket ID
-    const ticketId = `KRV-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
+    const ticketId = `LYS-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
 
-    console.log(`[Kravinoffs Serverless Inquiry] New Ticket ${ticketId}:`, {
+    console.log(`[Lightyear Studios Inquiry] New Ticket ${ticketId}:`, {
       name,
       email,
       phone: phone || 'N/A',
       service: service || 'General Inquiry',
-      budget: budget || 'To be discussed',
+      budget: budget || projectBudget || 'To be discussed',
       timeline: timeline || 'Flexible',
       receivedAt: new Date().toISOString()
     });
@@ -64,7 +64,7 @@ export default function handler(req, res) {
     return res.status(200).json({
       success: true,
       ticketId,
-      message: 'Inquiry received. A Kravinoffs executive and technical lead will review your requirements and reach out within 24 hours.',
+      message: 'Inquiry received. Lightyear Studios founder Hamza Malik will review your requirements and reach out within 24 hours.',
       data: {
         ticketId,
         clientName: name,
@@ -73,7 +73,7 @@ export default function handler(req, res) {
       }
     });
   } catch (err) {
-    console.error('[Kravinoffs Serverless API Error]:', err);
+    console.error('[Lightyear Studios API Error]:', err);
     return res.status(500).json({
       success: false,
       error: 'Internal server processing error. Please contact direct founder lines.'

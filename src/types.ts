@@ -9,6 +9,7 @@ export interface ServiceItem {
   category: 'technology' | 'marketing' | 'creative';
   kpi: string;
   timeline: string;
+  startingPrice?: string;
 }
 
 export interface PortfolioItem {
@@ -61,10 +62,10 @@ export interface SoftwareProject {
 }
 
 export interface VideoMarketingStats {
-  views: string;
-  roas: string;
-  ctr: string;
-  conversionLift: string;
+  format?: string;
+  deliverables?: string;
+  resolution?: string;
+  sound?: string;
 }
 
 export interface VideoProject {
@@ -81,17 +82,30 @@ export interface VideoProject {
   thumbnail: string;
   hookText: string;
   shortDesc: string;
-  marketingStats: VideoMarketingStats;
+  marketingStats?: VideoMarketingStats;
   campaignOverview: string;
   targetAudience: string;
   distributionChannels: string[];
   creativeDeliverables: string[];
 }
 
-export interface MarketingCampaignSummary {
-  totalViewsGenerated: string;
-  averageROAS: string;
-  totalRevenueGenerated: string;
-  averageAudienceRetention: string;
-  videoAssetsProduced: string;
+export interface MarketingPackage {
+  id: string;
+  number: string;
+  name: string;
+  price: string;
+  billingPeriod: string;
+  positioning: string;
+  isPopular?: boolean;
+  deliverables: string[];
+  bestFor: string;
+}
+
+export interface EngagementModel {
+  number: string;
+  title: string;
+  price: string;
+  description: string;
+  deliverables: string[];
+  isPopular?: boolean;
 }

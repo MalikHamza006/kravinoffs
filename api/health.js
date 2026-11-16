@@ -9,7 +9,7 @@ export default function handler(req, res) {
 
   return res.status(200).json({
     status: 'healthy',
-    system: 'Kravinoffs Agency Serverless Core',
+    system: 'Lightyear Studios Serverless Core',
     environment: process.env.VERCEL_ENV || 'production',
     region: process.env.VERCEL_REGION || 'auto',
     timestamp: new Date().toISOString(),

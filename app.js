@@ -1,6 +1,6 @@
 /**
- * KRAVINOFFS DIGITAL POWERHOUSE - INTERACTION ENGINE
- * Designed for Hamza Malik | kravinoffs.com
+ * LIGHTYEAR STUDIOS - INTERACTION ENGINE
+ * Designed for Hamza Malik | lightyearstudios.agency
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -120,7 +120,7 @@ const SERVICE_DATA = {
     ],
     timeline: '3 - 8 Weeks (Sprint Based Delivery)',
     kpi: '99.9% Uptime, Sub-100ms API Response Time',
-    prefilledMsg: 'Hi Hamza, I would like to book a Software Development blueprint consultation with Kravinoffs.'
+    prefilledMsg: 'Hi Hamza, I would like to book a Software Development consultation with Lightyear Studios.'
   },
   'digital-marketing': {
     title: 'Digital Marketing & Growth Funnels',
@@ -136,59 +136,59 @@ const SERVICE_DATA = {
       'Bi-Weekly Strategic Growth & Lead Velocity Audits'
     ],
     timeline: 'Continuous 30-Day Agile Growth Sprints',
-    kpi: 'Top 3 SERP Placements, 3x - 5x Organic Lead Velocity',
-    prefilledMsg: 'Hi Hamza, I am looking to scale our digital marketing and SEO dominance with Kravinoffs.'
+    kpi: 'Transparent Reporting & Strategic Lead Velocity',
+    prefilledMsg: 'Hi Hamza, I am looking to scale our digital marketing and SEO with Lightyear Studios.'
   },
   'social-media': {
     title: 'Social Media Marketing & Brand Presence',
-    tag: 'Viral Resonance & Authority',
+    tag: 'Resonance & Authority',
     img: 'assets/social-media.jpg',
-    summary: 'Crafting hypnotic brand identity and content ecosystems across Instagram, TikTok, LinkedIn, and YouTube to transform casual viewers into loyal brand apostles.',
+    summary: 'Crafting hypnotic brand identity and content ecosystems across Instagram, TikTok, LinkedIn, and YouTube to transform casual viewers into loyal brand advocates.',
     deliverables: [
       'Complete Aesthetic Social Architecture & Custom Grid Direction',
       'High-Engagement Short-Form Video Strategy (Reels & TikToks)',
       'Founder & C-Suite Personal Brand Scripting on LinkedIn / X',
       'Curated High-Value Influencer Alliances & Product Seeding',
       'Community Management & Rapid Fan Response Protocols',
-      'Monthly Viral Analytics & Engagement Velocity Audits'
+      'Monthly Analytics & Engagement Audits'
     ],
     timeline: 'Ongoing Monthly Retainers & Launch Sprints',
-    kpi: '10M+ Impressions, 400%+ Engagement Surge',
-    prefilledMsg: 'Hi Hamza, I want Kravinoffs to take over and scale our Social Media Marketing presence.'
+    kpi: 'Consistent Reach & Engagement Surges',
+    prefilledMsg: 'Hi Hamza, I want Lightyear Studios to take over and manage our Social Media Marketing presence.'
   },
   'ads-running': {
     title: 'High-ROI Ads Running & Paid Media',
     tag: 'Performance Acquisition',
     img: 'assets/ads-running.jpg',
-    summary: 'Predictable, profitable customer acquisition engines. We run and scale paid ad spend across Meta Ads, Google Ads, TikTok, and YouTube with surgical precision.',
+    summary: 'Predictable customer acquisition engines. We run and scale paid ad spend across Meta Ads, Google Ads, TikTok, and YouTube with precision.',
     deliverables: [
       'Meta Ads Full-Funnel Structure (Cold Prospecting to Retargeting)',
       'Google Search, Performance Max & YouTube In-Stream Ads',
       'Meta Conversions API (CAPI) & Server-Side Event Tracking',
       'Continuous Creative A/B Testing & Ad Fatigue Management',
       'Laser-Targeted Audience Segmentation & Lookalike Modeling',
-      'Real-Time Transparent ROAS Dashboard & Weekly Scaling Calls'
+      'Real-Time Transparent Dashboard & Performance Scaling'
     ],
     timeline: 'Immediate Launch within 5 - 7 Days',
-    kpi: 'Average 4.5x - 8.2x Return on Ad Spend (ROAS)',
-    prefilledMsg: 'Hi Hamza, I need Kravinoffs to manage and scale our Paid Ads campaigns for maximum ROAS.'
+    kpi: 'Transparent Conversion Tracking & Optimization',
+    prefilledMsg: 'Hi Hamza, I need Lightyear Studios to manage and optimize our Paid Ads campaigns.'
   },
   'video-production': {
-    title: 'Cinematic Video Production & 3D Motion',
-    tag: 'Cinema Grade Commercials',
+    title: 'Commercial Video Production & Creative Media',
+    tag: 'Commercial Grade Visuals',
     img: 'assets/video-production.jpg',
-    summary: 'Cinema-standard visual storytelling that commands unconditional authority. We shoot with high-end cinema equipment and render cutting-edge 3D motion graphics.',
+    summary: 'Professional visual storytelling that commands authority. We shoot with commercial camera packages and deliver motion graphics up to 4K UHD.',
     deliverables: [
-      'Commercial Brand Films & High-Impact TV Commercials',
+      'Commercial Brand Films & High-Impact Commercials',
       'Direct-Response High-Converting Video Ads (TikTok / Instagram)',
-      'Ultra-Realistic 3D Product Visualizations & CGI Motion',
-      'Pre-Production Scripting, Storyboarding & On-Set Direction',
-      'Master-Grade Color Grading (DaVinci Resolve Studio)',
+      'Product Visualizations & Motion Graphics',
+      'Pre-Production Scripting, Storyboarding & Direction',
+      'Color Grading (DaVinci Resolve Studio)',
       'Spatial Sound Design, Custom Score & Commercial Voiceover'
     ],
-    timeline: '2 - 4 Weeks per Commercial Production Cycle',
-    kpi: 'Cinema-Quality Master Delivery (4K/8K ProRes)',
-    prefilledMsg: 'Hi Hamza, I am interested in high-end Cinematic Video Production services with Kravinoffs.'
+    timeline: '2 - 3 Weeks per Commercial Production Cycle',
+    kpi: 'Master Delivery Up to 4K UHD',
+    prefilledMsg: 'Hi Hamza, I am interested in Commercial Video Production services with Lightyear Studios.'
   }
 };
 
@@ -304,7 +304,7 @@ function initContactForm() {
     const data = getFormData();
 
     const formattedMessage = 
-`*NEW INQUIRY FROM KRAVINOFFS.COM*
+`*NEW INQUIRY — LIGHTYEAR STUDIOS*
 ----------------------------------
 *Name:* ${data.name}
 *Email:* ${data.email}
@@ -315,7 +315,7 @@ function initContactForm() {
 *Project Overview:*
 ${data.details}
 ----------------------------------
-_Sent via kravinoffs web portal_`;
+_Sent via Lightyear Studios web portal_`;
 
     const whatsappUrl = `https://wa.me/923160442304?text=${encodeURIComponent(formattedMessage)}`;
 
@@ -338,7 +338,7 @@ _Sent via kravinoffs web portal_`;
       const data = getFormData();
       const subject = `[Project Inquiry] ${data.service} - ${data.name}`;
       const body = 
-`Hello Hamza and Kravinoffs Team,
+`Hello Hamza and Lightyear Studios Team,
 
 I would like to discuss a project with your agency.
 

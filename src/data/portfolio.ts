@@ -3,42 +3,42 @@ import { PortfolioItem } from '../types';
 export const portfolioData: PortfolioItem[] = [
   {
     id: 'project-1',
-    title: 'Enterprise Fintech Cloud Interface',
+    title: 'Modern Restaurant POS & Ordering Suite',
     category: 'Software & Web Development',
-    description: 'A high-concurrency web dashboard built with real-time financial data visualization, multi-tenant authentication, and ultra-low latency API architecture.',
+    description: 'A touch-optimized point-of-sale and kitchen display system paired with direct online ordering to help hospitality venues streamline orders.',
     image: '/assets/software-dev.jpg',
-    tags: ['React', 'TypeScript', 'Tailwind', 'REST APIs']
+    tags: ['React', 'TypeScript', 'WebSockets', 'TailwindCSS']
   },
   {
     id: 'project-2',
-    title: 'Algorithmic Omnichannel Growth System',
+    title: 'Multi-Channel Growth & Local Search Strategy',
     category: 'Digital Experiences',
-    description: 'Comprehensive SEO and digital growth architecture targeting high-intent global search queries and conversion rate optimization.',
+    description: 'Technical SEO, structured local listings, and targeted paid advertising campaigns engineered to capture qualified customer inquiries.',
     image: '/assets/digital-marketing.jpg',
-    tags: ['Technical SEO', 'CRO', 'Analytics', 'Funnel Strategy']
+    tags: ['Technical SEO', 'Google Ads', 'Local Optimisation', 'Conversion Tracking']
   },
   {
     id: 'project-3',
-    title: 'Viral Social Media Brand Architecture',
-    category: 'Marketing & Branding',
-    description: 'Cohesive visual identity and high-engagement content strategy crafted for maximum resonance across modern social feeds.',
-    image: '/assets/social-media.jpg',
-    tags: ['Brand Identity', 'Reels Strategy', 'Content System']
+    title: 'Hospitality Brand & Culinary Showcase Video',
+    category: 'Video Production',
+    description: 'A cinematic behind-the-scenes commercial capturing kitchen craftsmanship, artisanal ingredients, and restaurant ambiance in up to 4K UHD.',
+    image: '/assets/video-production.jpg',
+    tags: ['Commercial Video', '4K UHD', 'Color Grading', 'Sound Design']
   },
   {
     id: 'project-4',
-    title: 'High-Intent Performance Ad Engine',
-    category: 'Marketing & Branding',
-    description: 'Precision-targeted paid advertising campaign architecture engineered for sustainable customer acquisition and ROAS optimization.',
-    image: '/assets/ads-running.jpg',
-    tags: ['Meta Ads', 'Google Ads', 'CAPI Tracking', 'Multivariate Testing']
+    title: 'Headless E-Commerce Brand Storefront',
+    category: 'Software & Web Development',
+    description: 'A fast, responsive online retail storefront engineered with clean product catalog filtering and simplified checkout workflows.',
+    image: '/assets/social-media.jpg',
+    tags: ['Next.js', 'React', 'E-Commerce', 'Stripe']
   },
   {
     id: 'project-5',
-    title: 'Cinematic Commercial Brand Showcase',
-    category: 'Video Production',
-    description: 'Broadcast-quality 8K visual production featuring dynamic camera choreography, spatial sound design, and studio grade color mastery.',
-    image: '/assets/video-production.jpg',
-    tags: ['Commercial Film', '8K Cinema', 'Color Grading', 'Sound Design']
+    title: 'Targeted Social Media Video & Paid Ads',
+    category: 'Marketing & Branding',
+    description: 'Vertical 9:16 social media reels and multi-format commercial advertisements crafted to drive engagement and customer acquisition.',
+    image: '/assets/ads-running.jpg',
+    tags: ['Meta Ads', 'Social Reels', 'Content Strategy', 'Creative Direction']
   }
 ];

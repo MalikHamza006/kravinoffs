@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldBeamFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C77C" />
+      <stop offset="100%" stop-color="#D9A441" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#080808" />
+  <path d="M28 20 H42 V64 H76 V78 H28 Z" fill="url(#goldBeamFav)" />
+  <circle cx="76" cy="24" r="5" fill="#E8C77C" />
+</svg>

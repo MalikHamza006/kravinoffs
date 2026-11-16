@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, MessageCircle, Mail, Phone, Menu, Code2, Video, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
@@ -29,11 +29,11 @@ export const Navbar: React.FC = () => {
     };
   }, [mobileMenuOpen]);
 
-  // ALL pages unified directly into the main navigation
+  // Unified navigation items
   const allNavLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Software', href: '/software-portfolio', badge: 'Builds' },
-    { name: 'Video & Media', href: '/video-portfolio', badge: 'ROAS' },
+    { name: 'Software', href: '/software-portfolio', badge: 'Dev' },
+    { name: 'Video & Media', href: '/video-portfolio', badge: '4K' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
 
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true;
-    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    if (path !== '/' && !path.includes('#') && location.pathname.startsWith(path)) return true;
     return false;
   };
 
@@ -50,32 +50,32 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 inset-x-0 w-full z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-black/90 backdrop-blur-xl py-2.5 sm:py-3 border-b border-white/[0.08] shadow-2xl'
-            : 'bg-transparent py-3 sm:py-5'
+            ? 'bg-[#020408]/85 backdrop-blur-xl py-3 border-b border-white/10 shadow-2xl shadow-black/80'
+            : 'bg-transparent py-4 sm:py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-6">
           
-          {/* ZONE 1: Brand Logo & Wordmark (Left - Fluid on mobile) */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 group shrink min-w-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden bg-black flex items-center justify-center p-0.5 shadow-lg border border-white/15 transition-all duration-300 group-hover:scale-105 group-hover:border-white/40 shrink-0">
+          {/* ZONE 1: Brand Wordmark (Left) */}
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden bg-white/5 flex items-center justify-center p-1.5 shadow-lg border border-white/15 transition-all duration-300 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.25)] shrink-0">
               <img
-                src="/k.jpeg"
-                alt="Kravinoffs Emblem Logo"
-                className="w-full h-full object-cover rounded-lg"
+                src="/logo.svg"
+                alt="Lightyear Studios Logo"
+                className="w-full h-full object-contain"
               />
             </div>
-            <div className="flex items-baseline gap-1 truncate">
-              <span className="font-heading text-base sm:text-xl font-bold tracking-[0.08em] sm:tracking-[0.12em] text-white uppercase group-hover:text-neutral-100 transition-colors truncate">
-                KRAVINOFFS
+            <div className="flex items-baseline gap-1">
+              <span className="font-heading text-lg sm:text-xl font-bold tracking-[0.1em] text-white uppercase group-hover:text-cyan-300 transition-colors">
+                LIGHTYEAR
               </span>
-              <span className="text-[9px] sm:text-[10px] text-neutral-400 font-sans font-medium shrink-0">
-                ®
+              <span className="text-[9px] sm:text-[10px] text-cyan-400 font-mono tracking-widest uppercase">
+                STUDIOS
               </span>
             </div>
           </Link>
 
-          {/* ZONE 2: Unified Floating Nav Capsule (Center - All Pages Visible on Desktop) */}
+          {/* ZONE 2: Unified Floating Nav Capsule (Center) */}
           <nav className="hidden lg:flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/[0.04] backdrop-blur-2xl border border-white/10 shadow-lg shadow-black/40">
             {allNavLinks.map((link) => {
               const active = isActive(link.href);
@@ -106,11 +106,11 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* ZONE 3: Action Buttons (Right - Guaranteed to never overflow on mobile) */}
+          {/* ZONE 3: Action Buttons (Right) */}
           <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
-            {/* Live WhatsApp Direct Line (Hidden on Mobile/Phablet, Visible from md upwards) */}
+            {/* Live WhatsApp Direct Line */}
             <a
-              href="https://wa.me/923160442304?text=Hello%20Kravinoffs!%20I'm%20interested%20in%20your%20services.%20I'd%20like%20to%20discuss%20a%20project."
+              href="https://wa.me/923160442304?text=Hello%20Lightyear%20Studios!%20I'm%20interested%20in%20your%20services.%20I'd%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 hover:bg-emerald-500/20 text-xs font-medium tracking-wide transition-all group"
@@ -128,7 +128,7 @@ export const Navbar: React.FC = () => {
               <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </Link>
 
-            {/* Mobile-Only Hamburger Toggle (Always cleanly positioned within viewport) */}
+            {/* Mobile-Only Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 sm:p-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] border border-white/15 text-white transition-colors shrink-0 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white/40"
@@ -141,7 +141,7 @@ export const Navbar: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Drawer (Only for mobile/tablet screens when viewport is small) */}
+      {/* Mobile Drawer (Only for mobile/tablet screens) */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -158,18 +158,18 @@ export const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-2.5"
               >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden bg-black flex items-center justify-center p-0.5 border border-white/15 shadow-md shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden bg-white/5 flex items-center justify-center p-1.5 border border-white/15 shadow-md shrink-0">
                   <img
-                    src="/k.jpeg"
-                    alt="Kravinoffs Emblem Logo"
-                    className="w-full h-full object-cover rounded-lg"
+                    src="/logo.svg"
+                    alt="Lightyear Studios Logo"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="flex items-baseline gap-1">
                   <span className="font-heading text-lg sm:text-xl font-bold tracking-[0.1em] text-white uppercase">
-                    KRAVINOFFS
+                    LIGHTYEAR
                   </span>
-                  <span className="text-[9px] sm:text-[10px] text-neutral-400 font-sans">®</span>
+                  <span className="text-[9px] sm:text-[10px] text-cyan-400 font-mono tracking-widest uppercase">STUDIOS</span>
                 </div>
               </Link>
 
@@ -230,7 +230,7 @@ export const Navbar: React.FC = () => {
                 <span>WhatsApp Founder: +92 316 044 2304</span>
               </a>
               <div className="text-neutral-500 text-[11px]">
-                © {new Date().getFullYear()} Kravinoffs International.
+                © {new Date().getFullYear()} Lightyear Studios. All rights reserved.
               </div>
             </div>
           </motion.div>

@@ -1,4 +1,4 @@
-# Kravinoffs Agency Global Robots Specification
+# Lightyear Studios Robots Specification
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -16,7 +16,7 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# AI Crawlers for AEO (Answer Engine Optimization) & GEO (Generative Engine Optimization)
+# AI Crawlers for AEO (Answer Engine Optimisation) & GEO (Generative Engine Optimisation)
 User-agent: GPTBot
 Allow: /
 
@@ -37,4 +37,3 @@ Allow: /
 
 # Global Sitemap
 Sitemap: https://kravinoffs.agency/sitemap.xml
-Sitemap: https://kravinoffs.com/sitemap.xml

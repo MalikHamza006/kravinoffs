@@ -2,7 +2,7 @@ import React, { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { 
   Play, Volume2, VolumeX, ArrowRight, Video, Maximize2, 
-  MousePointer, Sparkles, Activity, Film, Layers, Radio 
+  MousePointer, Sparkles 
 } from 'lucide-react';
 import { VideoProject } from '../types';
 import { videoPortfolio as fallbackVideos, VIDEO_CATEGORIES } from '../data/videoPortfolio';
@@ -214,7 +214,7 @@ const ShadcnMotionStackedCard: React.FC<StackedCardProps> = ({
           }}
         />
 
-        {/* Card Header: Radix/Shadcn Badges with High-Contrast Typography */}
+        {/* Card Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5 pb-4 border-b border-white/15 relative z-10">
           <div>
             <div className="flex items-center gap-2 mb-1">
@@ -226,12 +226,12 @@ const ShadcnMotionStackedCard: React.FC<StackedCardProps> = ({
                 {theme.themeName}
               </span>
             </div>
-            <h2 className="text-xl sm:text-3xl font-display font-bold text-white tracking-tight drop-shadow-md">
+            <h2 className="text-xl sm:text-3xl font-heading font-bold text-white tracking-tight drop-shadow-md">
               {video.title}
             </h2>
           </div>
 
-          {/* Strict Metadata Pills: Type + Quality ONLY using Shadcn Badges */}
+          {/* Metadata Pills */}
           <div className="flex flex-wrap items-center gap-2.5">
             <Badge variant={theme.badgeVariant} className="text-xs px-3 py-1 font-semibold uppercase tracking-wider">
               Type: {video.type || video.category}
@@ -261,7 +261,7 @@ const ShadcnMotionStackedCard: React.FC<StackedCardProps> = ({
             <span className={`w-1 h-4 rounded-full ${theme.waveColor} animate-pulse`} style={{ animationDuration: '0.4s' }} />
             <span className={`w-1 h-2 rounded-full ${theme.waveColor} animate-pulse`} style={{ animationDuration: '0.8s' }} />
             <span className={`w-1 h-3.5 rounded-full ${theme.waveColor} animate-pulse`} style={{ animationDuration: '0.5s' }} />
-            <span className="text-[10px] font-mono text-white font-medium ml-1">LIVE STREAM</span>
+            <span className="text-[10px] font-mono text-white font-medium ml-1">4K CINEMA</span>
           </div>
 
           {/* Top Controls: Mute & Expand */}
@@ -336,17 +336,17 @@ export const VideoPortfolioPage: React.FC = () => {
   return (
     <div className="pt-28 pb-32 min-h-screen bg-[#020408] text-white relative selection:bg-cyan-400 selection:text-black">
       <SEO
-        title="Video & Media Production Portfolio | Kravinoffs"
-        description="Broadcast-grade 8K commercial cinema, 3D CGI procedural animation, and high-conversion video systems. Interactive mouse-reactive layers and verified quality specs."
+        title="Commercial Video Production Portfolio | Lightyear Studios"
+        description="Commercial brand films, hospitality showcases, product spotlights, and high-retention video content produced up to 4K UHD resolution by Lightyear Studios."
         canonical="https://kravinoffs.agency/video-portfolio"
       />
 
-      {/* Saturated Dynamic Floating Light Orbs (Kills Background Dullness) */}
+      {/* Saturated Dynamic Floating Light Orbs */}
       <div className="fixed top-20 left-10 w-[550px] h-[550px] rounded-full bg-cyan-600/20 blur-[150px] pointer-events-none animate-orb-1" />
       <div className="fixed top-1/2 right-10 w-[600px] h-[600px] rounded-full bg-violet-600/20 blur-[160px] pointer-events-none animate-orb-2" />
       <div className="fixed bottom-10 left-1/3 w-[500px] h-[500px] rounded-full bg-emerald-600/18 blur-[140px] pointer-events-none animate-orb-3" />
 
-      {/* Page Header — Systems Limited Minimal Authority + Radix Styling */}
+      {/* Page Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8 pt-4 pb-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -356,16 +356,16 @@ export const VideoPortfolioPage: React.FC = () => {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/15 text-xs font-mono text-cyan-300 uppercase tracking-widest mb-4 shadow-sm">
             <Video className="w-3.5 h-3.5 text-cyan-400" />
-            Media & Visual Engineering
+            Commercial Video & Visual Production
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold text-white tracking-tight leading-[1.05] drop-shadow-xl">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-heading font-bold text-white tracking-tight leading-[1.05] drop-shadow-xl uppercase">
             Cinematic Precision. <br />
             <span className="text-gradient-cyan">Stacking Layers.</span>
           </h1>
 
           <p className="mt-4 text-slate-200 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
-            8K RED cinema, procedural 3D CGI, and high-conversion product films. Scroll down to experience stacked layer pinning and mouse-reactive color transitions.
+            Commercial brand films, hospitality showcases, product spotlights, and high-retention social media content produced up to 4K UHD resolution. Scroll down to experience stacked layer pinning and mouse-reactive color transitions.
           </p>
 
           {/* Quick Metrics Bar */}
@@ -381,12 +381,12 @@ export const VideoPortfolioPage: React.FC = () => {
             </div>
             <div>•</div>
             <div>
-              <span className="text-white font-semibold">8K RED Monstro</span> Fleet
+              <span className="text-white font-semibold">Up to 4K UHD</span> Cinema Optics
             </div>
           </div>
         </motion.div>
 
-        {/* Minimal Category Selector with Radix/Shadcn Aesthetics */}
+        {/* Category Selector */}
         <div className="flex flex-wrap items-center gap-2.5 mt-8 pt-4">
           {VIDEO_CATEGORIES.map((cat) => {
             const isActive = selectedCategory === cat;
@@ -407,9 +407,7 @@ export const VideoPortfolioPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ==================================================================== */}
-      {/* THRIVE-STYLE STACKED SCROLLING LAYERS PINNING CONTAINER */}
-      {/* ==================================================================== */}
+      {/* STACKED SCROLLING LAYERS PINNING CONTAINER */}
       <section className="max-w-6xl mx-auto px-4 sm:px-8 relative z-10 py-6">
         <div className="relative">
           {filteredVideos.map((video, index) => {
@@ -432,19 +430,19 @@ export const VideoPortfolioPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Ultra-Minimal Bottom CTA — High-Contrast Precision */}
+      {/* Bottom CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-8 mt-24 text-center relative z-10">
         <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-b from-white/[0.05] to-black/80 border-2 border-white/20 backdrop-blur-2xl shadow-[0_0_50px_rgba(255,255,255,0.08)]">
-          <h2 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
-            Ready to Engineer High-Impact Media?
+          <h2 className="text-2xl sm:text-4xl font-heading font-bold text-white tracking-tight uppercase">
+            Ready to Create High-Impact Commercial Video?
           </h2>
           <p className="text-sm sm:text-base text-slate-200 mt-2 max-w-md mx-auto">
-            Direct production scopes, verified ProRes delivery, zero agency overhead.
+            Direct production scopes, up to 4K UHD master delivery, and transparent Australian AUD pricing.
           </p>
           <div className="mt-8 flex justify-center">
             <Link to="/contact">
               <Button variant="glow" size="lg" className="gap-2.5 font-bold">
-                <span>Initiate Media Scope</span>
+                <span>Initiate Video Project</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>

@@ -20,7 +20,7 @@ export default function handler(req, res) {
 
   return res.status(200).json({
     success: true,
-    message: 'Subscribed to Kravinoffs Executive Briefings & Tech Dispatches.',
+    message: 'Subscribed to Lightyear Studios technology & creative production dispatches.',
     email
   });
 }

@@ -16,31 +16,31 @@ export const Footer: React.FC = () => {
           
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-6">
-            <Link to="/" className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-lg overflow-hidden bg-black flex items-center justify-center p-0.5 shadow-md border border-white/10">
+            <Link to="/" className="flex items-center gap-3.5 group">
+              <div className="w-10 h-10 rounded-xl overflow-hidden bg-white/5 flex items-center justify-center p-1.5 shadow-md border border-white/10 group-hover:border-cyan-500/40 transition-colors">
                 <img
-                  src="/k.jpeg"
-                  alt="Kravinoffs Emblem"
-                  className="w-full h-full object-cover"
+                  src="/logo.svg"
+                  alt="Lightyear Studios Emblem"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-heading text-xl font-bold tracking-[0.15em] text-white">
-                  KRAVINOFFS
+                <span className="font-heading text-xl font-bold tracking-[0.15em] text-white group-hover:text-cyan-300 transition-colors">
+                  LIGHTYEAR
                 </span>
-                <span className="text-[10px] tracking-[0.25em] text-chrome-400 uppercase">
-                  Digital Agency & Engineering Labs
+                <span className="text-[10px] tracking-[0.25em] text-cyan-400 uppercase font-mono">
+                  STUDIOS
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-chrome-300 max-w-sm leading-relaxed font-normal">
-              Kravinoffs engineers mission-critical enterprise software and broadcast-grade commercial cinema. Built for scale, delivered without compromise.
+              Lightyear Studios brings software development, commercial video production and digital marketing together under one creative and technical direction. Ideas beyond limits.
             </p>
 
             <div className="pt-2 text-xs text-chrome-400 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Leadership Active: <strong className="text-white">Hamza Malik</strong></span>
+              <span>Founder & Director: <strong className="text-white">Hamza Malik</strong></span>
             </div>
           </div>
 
@@ -52,24 +52,24 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-chrome-300">
               <li>
                 <Link to="/software-portfolio" className="hover:text-white transition-colors flex items-center gap-2">
-                  <Code2 className="w-3.5 h-3.5 text-white/70" />
+                  <Code2 className="w-3.5 h-3.5 text-cyan-400" />
                   <span>Software & Cloud Portfolio</span>
                 </Link>
               </li>
               <li>
                 <Link to="/video-portfolio" className="hover:text-white transition-colors flex items-center gap-2">
-                  <Video className="w-3.5 h-3.5 text-white/70" />
-                  <span>Video & Marketing Showcase</span>
+                  <Video className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Commercial Video (Up to 4K)</span>
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
-                  5 Core Capabilities
+                  Services & Australian AUD Pricing
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="hover:text-white transition-colors">
-                  Production Arsenal & Gear
+                  About Studio & Production Standards
                 </Link>
               </li>
             </ul>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-sm text-chrome-300">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors">Services & Pricing</Link></li>
               <li><Link to="/software-portfolio" className="hover:text-white transition-colors">Software</Link></li>
               <li><Link to="/video-portfolio" className="hover:text-white transition-colors">Videos</Link></li>
               <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
                   className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
                   <MessageCircle className="w-3.5 h-3.5 shrink-0" />
-                  <span>WhatsApp Line</span>
+                  <span>WhatsApp Founder</span>
                 </a>
               </li>
               <li>
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Mail className="w-3.5 h-3.5 shrink-0" />
-                  <span>hamzamalik789890@gmail.com</span>
+                  <span className="truncate">hamzamalik789890@gmail.com</span>
                 </a>
               </li>
               <li>
@@ -130,12 +130,13 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-chrome-400">
           <div>
-            © {new Date().getFullYear()} Kravinoffs International. All Rights Reserved.
+            © {new Date().getFullYear()} Lightyear Studios. Operating Base: Lahore, Pakistan • Serving Australia & Worldwide.
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-[11px] text-emerald-400/80">
-              ● Vercel Fullstack Deployment Ready
+            <span className="text-[11px] text-emerald-400/80 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              Remote Delivery Ready
             </span>
             <button
               onClick={scrollToTop}

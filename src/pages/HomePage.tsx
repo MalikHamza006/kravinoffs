@@ -49,12 +49,13 @@ export const HomePage: React.FC = () => {
   const featuredVideos = videoPortfolio.slice(0, 3);
 
   return (
-    <div className="bg-[#020408] text-white selection:bg-cyan-400 selection:text-black">
+    <div className="bg-[#020408] text-white selection:bg-cyan-500 selection:text-black">
       <SEO
-        title="Kravinoffs™ | Enterprise Software Engineering & Broadcast 8K Cinema"
-        description="Kravinoffs engineers mission-critical enterprise software, low-latency financial systems, and broadcast-grade 8K commercial cinema. Minimal overhead, maximum impact."
+        title="Lightyear Studios | Software Development, Video Production & Digital Marketing"
+        description="Lightyear Studios helps Australian and international businesses build custom websites, web applications, SaaS platforms, restaurant management systems, commercial videos and digital marketing strategies."
         canonical="https://kravinoffs.agency/"
       />
+      
       {/* Hero Section */}
       <Hero />
 
@@ -64,23 +65,22 @@ export const HomePage: React.FC = () => {
       {/* Core Services Section */}
       <Services />
 
-      {/* SPOTLIGHT 1: Software Systems Showcase */}
-      <section className="py-20 sm:py-28 bg-[#04060d] border-y border-white/10 relative overflow-hidden">
-        {/* Subtle Ambient Backlight */}
-        <div className="absolute top-1/2 left-10 w-[450px] h-[450px] rounded-full bg-cyan-600/10 blur-[140px] pointer-events-none" />
+      {/* SPOTLIGHT 1: Software & Digital Systems */}
+      <section className="py-20 sm:py-28 bg-[#050811] border-y border-white/10 relative overflow-hidden">
+        <div className="absolute top-1/2 left-10 w-[450px] h-[450px] rounded-full bg-cyan-600/10 blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/15 text-xs font-mono text-cyan-300 uppercase tracking-widest mb-3">
                 <Code2 className="w-3.5 h-3.5 text-cyan-400" />
-                Software Builds
+                Featured Systems
               </div>
-              <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
-                Software & Cloud Systems
+              <h2 className="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight uppercase">
+                Software & Business Systems
               </h2>
               <p className="text-slate-300 max-w-xl text-sm sm:text-base mt-2 font-normal">
-                Low-latency fintech terminals, autonomous AI logistics, and cloud platforms.
+                Restaurant POS platforms, zero-commission food ordering, and cloud business software.
               </p>
             </div>
 
@@ -92,14 +92,14 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
 
-          {/* Software Cards: Title + Preview + Type + Quality ONLY */}
+          {/* Software Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredSoftware.map((project) => (
               <motion.div
                 key={project.id}
-                whileHover={{ y: -6, scale: 1.01 }}
+                whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-                className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f1d] to-[#04070f] border-2 border-white/10 hover:border-cyan-400/40 overflow-hidden flex flex-col transition-all shadow-xl hover:shadow-[0_15px_40px_-10px_rgba(6,182,212,0.3)]"
+                className="group relative rounded-2xl bg-gradient-to-b from-[#0a0f1d] to-[#04060c] border border-white/10 hover:border-cyan-500/50 overflow-hidden flex flex-col transition-all shadow-xl hover:shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
               >
                 <div className="relative aspect-video overflow-hidden bg-black">
                   <img
@@ -117,7 +117,7 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <h3 className="text-lg font-display font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-heading font-bold text-white group-hover:text-cyan-300 transition-colors">
                     {project.title}
                   </h3>
 
@@ -152,7 +152,6 @@ export const HomePage: React.FC = () => {
 
       {/* SPOTLIGHT 2: Cinematic Video Showcase with Video & Media Color Themes */}
       <section className="py-20 sm:py-28 bg-[#010204] relative overflow-hidden border-b border-white/10">
-        {/* Subtle Ambient Backlight */}
         <div className="absolute top-1/2 right-10 w-[500px] h-[500px] rounded-full bg-violet-600/10 blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
@@ -162,11 +161,11 @@ export const HomePage: React.FC = () => {
                 <Video className="w-3.5 h-3.5 text-cyan-400" />
                 Cinema & Media Showcase
               </div>
-              <h2 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
-                Cinematic Video Production
+              <h2 className="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight uppercase">
+                Commercial Video Production
               </h2>
               <p className="text-slate-300 max-w-xl text-sm sm:text-base mt-2 font-normal">
-                8K RED cinema, procedural 3D motion, and performance commercials.
+                Up to 4K UHD commercial brand films, restaurant videos, and social media reels.
               </p>
             </div>
 
@@ -178,7 +177,7 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
 
-          {/* Video Cards with identical rich Video & Media color palettes */}
+          {/* Video Cards with rich Video & Media color palettes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredVideos.map((video, idx) => {
               const theme = HOME_VIDEO_THEMES[idx % HOME_VIDEO_THEMES.length];
@@ -207,11 +206,11 @@ export const HomePage: React.FC = () => {
                   </div>
 
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                    <h3 className="text-lg font-display font-bold text-white group-hover:text-neutral-100 transition-colors">
+                    <h3 className="text-lg font-heading font-bold text-white group-hover:text-neutral-100 transition-colors">
                       {video.title}
                     </h3>
 
-                    {/* Strict Metadata: Type & Quality Styled with Theme Badges */}
+                    {/* Metadata */}
                     <div className="space-y-2 pt-2 border-t border-white/10 text-xs font-mono">
                       <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-between">
                         <span className="text-slate-400 text-[11px] uppercase">Type:</span>
