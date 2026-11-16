@@ -113,9 +113,26 @@ _Dispatched via Lightyear Studios Website_`;
   return (
     <div className="pt-28 pb-24 sm:pb-32 min-h-screen bg-obsidian-950 text-chrome-200">
       <SEO
-        title="Contact & Brief Inquiries | Lightyear Studios Australia"
-        description="Initiate a project brief with Lightyear Studios. Speak directly with Founder Hamza Malik on WhatsApp or submit your software, restaurant tech or video brief."
+        title="Contact Lightyear Studios | Direct WhatsApp & Project Quotations"
+        description="Initiate a project brief with Lightyear Studios. Speak directly with Founder Hamza Malik on WhatsApp (+92 316 044 2304) or submit your custom software, restaurant tech or video brief."
         canonical="https://kravinoffs.agency/contact"
+        keywords="Contact Lightyear Studios, Hamza Malik WhatsApp, Software Development Quote Australia, Restaurant POS Quote, Commercial Video Quotation, Web Application Consultation, Lightyear Studios Contact"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Lightyear Studios",
+          "url": "https://kravinoffs.agency/contact",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Lightyear Studios",
+            "founder": {
+              "@type": "Person",
+              "name": "Hamza Malik"
+            },
+            "telephone": "+923160442304",
+            "email": "hamzamalik789890@gmail.com"
+          }
+        }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         

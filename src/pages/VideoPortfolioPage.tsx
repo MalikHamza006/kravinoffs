@@ -336,9 +336,21 @@ export const VideoPortfolioPage: React.FC = () => {
   return (
     <div className="pt-28 pb-32 min-h-screen bg-[#020408] text-white relative selection:bg-cyan-400 selection:text-black">
       <SEO
-        title="Commercial Video Production Portfolio | Lightyear Studios"
-        description="Commercial brand films, hospitality showcases, product spotlights, and high-retention video content produced up to 4K UHD resolution by Lightyear Studios."
+        title="Commercial Video Production & 4K Video Editing Portfolio | Lightyear Studios"
+        description="Commercial brand films, hospitality spotlights, product showcases, and high-retention social media video content produced up to 4K UHD resolution by Lightyear Studios."
         canonical="https://kravinoffs.agency/video-portfolio"
+        keywords="Commercial Video Production Australia, 4K Video Editing Services, Corporate Video Production Sydney Melbourne, Social Media Reels Editing, Product Video Showcase, Commercial Brand Films, Video Production Agency Australia, Hamza Malik"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Commercial Video Production & 4K Post-Production Portfolio",
+          "description": "Cinema-grade 4K commercial films, social media reels, and product showcases produced by Lightyear Studios.",
+          "url": "https://kravinoffs.agency/video-portfolio",
+          "provider": {
+            "@type": "Organization",
+            "name": "Lightyear Studios"
+          }
+        }}
       />
 
       {/* Saturated Dynamic Floating Light Orbs */}

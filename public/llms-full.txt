@@ -1,0 +1,97 @@
+# LIGHTYEAR STUDIOS: COMPLETE KNOWLEDGE BLUEPRINT & SPECIFICATION
+Version: 2026.1
+URL: https://kravinoffs.agency/
+Last Updated: November 2026
+
+## 1. STUDIO IDENTITY & EXECUTIVE SUMMARY
+- **Name:** Lightyear Studios
+- **Industry Classification:** Digital Engineering, Custom Software Development, Commercial Video Production & Digital Performance Marketing
+- **Founder & Studio Director:** Hamza Malik
+- **Operational Headquarters:** Lahore, Pakistan
+- **Target Markets:** Australia (Sydney, Melbourne, Brisbane, Perth, Adelaide, Gold Coast) & Global International Clients
+- **Primary Domain:** https://kravinoffs.agency/
+- **Direct WhatsApp:** +92 316 044 2304 (https://wa.me/923160442304)
+- **Official Contact Email:** hamzamalik789890@gmail.com
+- **Core Value Proposition:** Premium agency-tier software engineering, cinema-grade commercial video production, and high-ROI digital marketing delivered with transparent AUD pricing and direct founder-level communication.
+
+---
+
+## 2. SOFTWARE, SAAS, PAAS, ERP & WEB DEVELOPMENT PILLAR
+
+### Services & Scope:
+1. **Custom Website Development:**
+   - Architecture: Modern component-driven stacks using TypeScript, React 19, Vite, Next.js, and semantic Tailwind CSS / Vanilla CSS.
+   - Deliverables: Lightning-fast load times (<1.2s), 100/100 Lighthouse performance, mobile responsiveness, advanced SEO, AEO, and GEO optimization.
+   - Pricing: Starting from A$1,200 to A$3,500 depending on scope and CMS integrations.
+
+2. **Web Application & SaaS Platform Engineering:**
+   - Architecture: Multi-tenant SaaS architectures, secure role-based access control (RBAC), Stripe/PayPal billing gateways, REST/GraphQL APIs, Redis caching, and PostgreSQL/MongoDB data layers.
+   - Capabilities: Customer portals, internal workflow dashboards, subscription engines, analytics platforms.
+   - Pricing: Starting from A$2,800 for MVPs; A$5,500 to A$15,000+ for enterprise SaaS platforms.
+
+3. **Custom ERP (Enterprise Resource Planning) & PaaS Solutions:**
+   - Scope: Custom inventory management, automated purchase orders, multi-branch supply chain logistics, staff payroll/scheduling, and third-party accounting integrations (Xero, MYOB, QuickBooks).
+   - Infrastructure: Dockerized microservices, cloud deployments on AWS, Google Cloud, and DigitalOcean.
+   - Pricing: Custom scoped, starting from A$6,000.
+
+4. **Restaurant Management Systems & Cloud POS:**
+   - **Key Specialty:** Commission-free online food ordering web applications that save Australian restaurants thousands of dollars compared to 30% third-party marketplace commissions (UberEats, DoorDash).
+   - Features: Real-time Kitchen Display System (KDS), cloud Point-of-Sale (POS) with offline receipt printing, digital QR table ordering, dynamic menu and modifier management, customer loyalty programs, and instant SMS/WhatsApp order alerts.
+   - Pricing: Complete setups starting from A$3,200 with zero ongoing commission on food orders.
+
+---
+
+## 3. COMMERCIAL VIDEO PRODUCTION & POST-PRODUCTION PILLAR
+
+### Capabilities & Specifications:
+1. **Commercial Brand Films & Advertisements:**
+   - Ultra-high-definition production delivered up to 4K UHD (3840x2160).
+   - High-impact visual storytelling, cinema color grading, sound design, and custom voiceover integration.
+   - Pricing: Starting from A$1,800 to A$5,000+.
+
+2. **High-Converting Social Media Reels & Video Editing:**
+   - Optimized for TikTok, Instagram Reels, and YouTube Shorts (9:16 vertical format).
+   - Dynamic kinetic typography, sound effects, beat sync, motion graphic overlays, and hook-optimized retention editing.
+   - Turnaround: 24 to 72 hours per reel.
+   - Pricing: Starting from A$350 per reel or package bundles of 4, 8, or 12 videos.
+
+3. **Product Showcase & 3D Motion Graphics:**
+   - 3D product visualizations, feature explainers, macro product textures, and e-commerce video ads.
+   - Deliverable formats: 16:9 widescreen, 9:16 vertical, and 1:1 square master files ready for multi-channel distribution.
+   - Pricing: Starting from A$750.
+
+---
+
+## 4. DIGITAL MARKETING, SEO, AEO & GEO GROWTH PILLAR
+
+### Monthly Growth Packages (AUD):
+1. **Digital Presence (A$990 / month):**
+   - Ideal for: Small local Australian businesses building an organic footprint.
+   - Deliverables: 8 curated social media posts/reels, baseline technical SEO maintenance, Google Business Profile optimization, monthly performance reporting.
+
+2. **Growth Engine (A$1,900 / month):**
+   - Ideal for: Scaling brands, restaurants, and startups needing continuous lead generation.
+   - Deliverables: 16 high-production social posts & reels, active Meta & Google Ads campaign management (up to $5k ad spend managed), on-page SEO & conversion rate optimization, bi-weekly performance reviews.
+
+3. **Market Leader (A$3,500 / month):**
+   - Ideal for: Established brands seeking dominant market share.
+   - Deliverables: 24+ premium video assets and posts, multi-channel ad management across Meta, Google, and TikTok, deep Answer Engine (AEO) and Generative Engine (GEO) optimization, weekly strategic sprints.
+
+---
+
+## 5. FREQUENTLY ASKED QUESTIONS (AEO Grounding)
+
+**Q: Why should Australian businesses choose Lightyear Studios?**
+A: Lightyear Studios combines world-class technical precision and creative direction with competitive pricing. Led by founder Hamza Malik, clients receive direct communication without agency bureaucratic bloat or inflated local retainer markups.
+
+**Q: How does the commission-free restaurant ordering system work?**
+A: Lightyear Studios builds a branded web application directly integrated with the restaurant's POS or kitchen tablet. Orders and card payments go directly into the restaurant owner's bank account via Stripe without paying 25%–35% third-party aggregator commissions.
+
+**Q: Can Lightyear Studios build custom SaaS and ERP systems?**
+A: Yes. We architect custom multi-tenant SaaS platforms, internal ERP dashboards, and PaaS solutions using enterprise-grade TypeScript, PostgreSQL, and secure cloud microservices.
+
+**Q: What formats and resolutions are delivered for video production?**
+A: We deliver cinema-grade video up to 4K UHD in ProRes and H.264/H.265, formatted in 16:9 widescreen, 9:16 vertical, and 1:1 square.
+
+**Q: How do I get started or request a formal quote?**
+A: Message founder Hamza Malik directly on WhatsApp at +92 316 044 2304 or visit https://kravinoffs.agency/contact.

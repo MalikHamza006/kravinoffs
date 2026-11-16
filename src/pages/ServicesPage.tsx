@@ -21,6 +21,50 @@ export const ServicesPage: React.FC = () => {
         title="Custom Software, Restaurant Tech, Video Production & Digital Marketing | Lightyear Studios"
         description="Comprehensive Australian studio capabilities: Website & Software Development, Restaurant POS & Ordering Tech, 4K Commercial Video Production, and Transparent Monthly Marketing Packages in AUD."
         canonical="https://kravinoffs.agency/services"
+        keywords="Software Development Australia, Custom Software Pricing, Restaurant POS System Cost Australia, Commission-Free Food Ordering App, 4K Commercial Video Production, Social Media Video Editing, Digital Marketing Packages AUD, AEO Optimization Australia, GEO Optimization, Lightyear Studios, Hamza Malik"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Digital Engineering, Video Production & Marketing Capabilities",
+          "provider": {
+            "@type": "Organization",
+            "name": "Lightyear Studios",
+            "url": "https://kravinoffs.agency"
+          },
+          "serviceType": "Software Engineering, Video Production and Growth Marketing",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Custom Website & Software Development",
+              "price": "1200",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Restaurant POS & Commission-Free Ordering",
+              "price": "3200",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Digital Presence Monthly Marketing",
+              "price": "990",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Growth Engine Monthly Marketing",
+              "price": "1900",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Market Leader Monthly Marketing",
+              "price": "3500",
+              "priceCurrency": "AUD"
+            }
+          ]
+        }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         

@@ -1,54 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
-  <!-- Lightyear Studios Homepage -->
+  <!-- Lightyear Studios Homepage & Primary Hub -->
   <url>
     <loc>https://kravinoffs.agency/</loc>
-    <lastmod>2026-11-16T22:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-16T23:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kravinoffs.agency/logo.svg</image:loc>
+      <image:title>Lightyear Studios Logo</image:title>
+      <image:caption>Digital Engineering, Custom Software Development &amp; Commercial Video Production</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kravinoffs.agency/assets/hero-sculpture.png</image:loc>
+      <image:title>Lightyear Studios 3D Liquid Chrome Sculpture</image:title>
+      <image:caption>Future-grade engineering and creative direction</image:caption>
+    </image:image>
   </url>
 
-  <!-- Software, Web Apps & Restaurant POS Development Portfolio -->
+  <!-- Software, SaaS, PaaS, ERP & Restaurant POS Development Portfolio -->
   <url>
     <loc>https://kravinoffs.agency/software-portfolio</loc>
-    <lastmod>2026-11-16T22:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T23:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://kravinoffs.agency/logo.svg</image:loc>
+      <image:title>Custom Software &amp; Restaurant POS Portfolio</image:title>
+      <image:caption>High performance web applications, ERPs, and commission-free ordering systems</image:caption>
+    </image:image>
   </url>
 
-  <!-- Commercial Video Production (Up to 4K) Portfolio -->
+  <!-- Commercial Video Production (Up to 4K UHD) Portfolio -->
   <url>
     <loc>https://kravinoffs.agency/video-portfolio</loc>
-    <lastmod>2026-11-16T22:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T23:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://kravinoffs.agency/logo.svg</image:loc>
+      <image:title>Commercial Video Production Portfolio</image:title>
+      <image:caption>4K commercial brand films, social media reels, and product showcases</image:caption>
+    </image:image>
   </url>
 
-  <!-- Studio Capabilities, Restaurant Tech & Pricing -->
+  <!-- Capabilities, Restaurant Tech & Transparent AUD Pricing -->
   <url>
     <loc>https://kravinoffs.agency/services</loc>
-    <lastmod>2026-11-16T22:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-16T23:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- About Lightyear Studios, Provenance & Toolchains -->
+  <!-- About Lightyear Studios, Provenance & Founder Hamza Malik -->
   <url>
     <loc>https://kravinoffs.agency/about</loc>
-    <lastmod>2026-11-16T22:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T23:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Contact & Project Briefing -->
+  <!-- Contact Portal & Direct WhatsApp Briefing -->
   <url>
     <loc>https://kravinoffs.agency/contact</loc>
-    <lastmod>2026-11-16T22:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-16T23:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 

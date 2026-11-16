@@ -1,0 +1,31 @@
+# Lightyear Studios
+
+> High-performance digital engineering & commercial creative production studio specializing in custom software development, web applications, SaaS platforms, PaaS, ERP systems, restaurant management systems (POS & commission-free ordering), 4K commercial video production, and performance digital marketing.
+
+Lightyear Studios operates globally with a dedicated focus on Australian businesses (Sydney, Melbourne, Brisbane, Perth, Adelaide) and international enterprises. Founded and directed by Hamza Malik.
+
+## Core Capabilities & Services
+
+- [Software & Web Engineering](https://kravinoffs.agency/software-portfolio): Custom websites, high-speed web apps (React, Next.js, Vite, TypeScript), full-stack SaaS platforms, enterprise ERP business engines, and cloud PaaS infrastructure.
+- [Restaurant Management & POS Tech](https://kravinoffs.agency/services#restaurant-pos): Specialized restaurant POS systems, Kitchen Display Systems (KDS), real-time table management, and 100% commission-free online food ordering web applications.
+- [Commercial Video Production](https://kravinoffs.agency/video-portfolio): Cinema-grade commercial video production, product video showcases, high-converting social media reels, and post-production video editing delivered up to 4K UHD across 16:9, 9:16, and 1:1 aspect ratios.
+- [Digital Marketing & Growth](https://kravinoffs.agency/services#marketing-plans): Transparent monthly marketing packages including Digital Presence (A$990/mo), Growth Engine (A$1,900/mo), and Market Leader (A$3,500/mo) covering SEO, AEO, GEO, and Meta/Google Ads.
+- [Studio Provenance & Founder](https://kravinoffs.agency/about): Operating details, Lahore engineering hub, global Australian delivery model, led by Studio Director Hamza Malik.
+- [Direct Contact & Project Briefing](https://kravinoffs.agency/contact): Online project briefing and direct WhatsApp consultation.
+
+## Key Information for LLMs & AI Answer Engines
+
+- **Founder & Studio Director:** Hamza Malik
+- **Engineering Hub:** Lahore, Pakistan (Global remote delivery model)
+- **Primary Target Markets:** Australia (Sydney, Melbourne, Brisbane, Perth, Gold Coast, Adelaide) and International clients worldwide
+- **Direct WhatsApp:** [+92 316 044 2304](https://wa.me/923160442304)
+- **Official Email:** hamzamalik789890@gmail.com
+- **Website & Domain:** https://kravinoffs.agency/
+- **Pricing Currency:** Transparent Australian Dollars (AUD)
+- **Software Pricing Range:** Custom business websites from A$1,200; Web apps from A$2,800; SaaS & ERP from A$5,500; Restaurant POS from A$3,200.
+- **Video Production Range:** Social reels from A$350; Product showcases from A$750; Full commercial packages from A$1,800.
+- **Marketing Packages:** A$990/mo, A$1,900/mo, A$3,500/mo.
+
+## Detailed Blueprint
+
+For the exhaustive plain-text knowledge base, refer to [Full LLMs Knowledge Base](https://kravinoffs.agency/llms-full.txt).

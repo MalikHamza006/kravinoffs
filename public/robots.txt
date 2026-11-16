@@ -1,14 +1,17 @@
-# Lightyear Studios Robots Specification
+# Lightyear Studios Robots Specification & AI Agent Crawling Policy
+# Domain: https://kravinoffs.agency
+
 User-agent: *
 Allow: /
 Disallow: /api/
 
-# Specialized Search Engine Crawlers
+# Primary Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
 Allow: /assets/
+Allow: /
 
 User-agent: Bingbot
 Allow: /
@@ -16,7 +19,7 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# AI Crawlers for AEO (Answer Engine Optimisation) & GEO (Generative Engine Optimisation)
+# Generative AI & Answer Engine Optimisation (GEO & AEO) Crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -29,11 +32,19 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
 User-agent: CCBot
 Allow: /
 
-# Global Sitemap
+User-agent: FacebookBot
+Allow: /
+
+# Global Sitemaps & Machine-Readable AI Knowledge Endpoints
 Sitemap: https://kravinoffs.agency/sitemap.xml
+llms-txt: https://kravinoffs.agency/llms.txt
+llms-full-txt: https://kravinoffs.agency/llms-full.txt

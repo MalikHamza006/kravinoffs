@@ -51,9 +51,21 @@ export const HomePage: React.FC = () => {
   return (
     <div className="bg-[#020408] text-white selection:bg-cyan-500 selection:text-black">
       <SEO
-        title="Lightyear Studios | Software Development, Video Production & Digital Marketing"
-        description="Lightyear Studios helps Australian and international businesses build custom websites, web applications, SaaS platforms, restaurant management systems, commercial videos and digital marketing strategies."
+        title="Lightyear Studios | Software Development, SaaS, Restaurant POS, 4K Video & Digital Marketing"
+        description="Lightyear Studios helps Australian and international businesses build custom websites, web applications, SaaS platforms, ERP systems, commission-free restaurant POS, 4K commercial videos, and performance digital marketing."
         canonical="https://kravinoffs.agency/"
+        keywords="Software Development Australia, Website Development Australia, Custom Web Applications, SaaS Development, PaaS Architecture, ERP Development, Restaurant POS Systems, Restaurant Management Software, Commission-Free Food Ordering, Commercial Video Production, 4K Video Editing, Digital Marketing Packages, SEO Services Australia, Local SEO Sydney Melbourne Brisbane, AEO Services, GEO Services, Lightyear Studios, Hamza Malik"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Lightyear Studios",
+          "url": "https://kravinoffs.agency/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://kravinoffs.agency/services?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
       />
       
       {/* Hero Section */}

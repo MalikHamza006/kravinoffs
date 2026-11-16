@@ -1,0 +1,63 @@
+{
+  "name": "Lightyear Studios | Software, Video & Digital Marketing",
+  "short_name": "Lightyear Studios",
+  "description": "High-performance custom software, SaaS & ERP systems, restaurant POS platforms, commercial video production up to 4K, and digital marketing agency.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#020408",
+  "theme_color": "#00f0ff",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities",
+    "developer tools"
+  ],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Software & Web Development",
+      "short_name": "Software",
+      "description": "Explore custom software, SaaS, ERP & restaurant POS engineering",
+      "url": "/software-portfolio",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Commercial Video Production",
+      "short_name": "Video",
+      "description": "Commercial advertisements and 4K social media video editing",
+      "url": "/video-portfolio",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Capabilities & Pricing",
+      "short_name": "Services",
+      "description": "Transparent pricing for software, video and marketing packages",
+      "url": "/services",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact & Request Quote",
+      "short_name": "Contact",
+      "description": "Brief our studio or speak directly with founder Hamza Malik",
+      "url": "/contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    }
+  ]
+}

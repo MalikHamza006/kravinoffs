@@ -33,9 +33,21 @@ export const SoftwarePortfolioPage: React.FC = () => {
   return (
     <div className="pt-28 pb-32 min-h-screen bg-[#020408] text-white relative selection:bg-cyan-400 selection:text-black">
       <SEO
-        title="Custom Software, Web Apps & Restaurant POS Portfolio | Lightyear Studios"
+        title="Custom Software, Web Apps, SaaS & Restaurant POS Portfolio | Lightyear Studios"
         description="Explore Lightyear Studios custom software engineering builds: Restaurant POS systems, commission-free food ordering web apps, multi-tenant SaaS platforms, and modern ERPs."
         canonical="https://kravinoffs.agency/software-portfolio"
+        keywords="Custom Software Development Australia, Web Application Development Australia, SaaS Development, PaaS Architecture, ERP Development, Restaurant POS Systems, Restaurant Management Software, Commission-Free Food Ordering Web App, Online Ordering Tech, Cloud POS Australia, Hamza Malik"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Custom Software, SaaS & Restaurant POS Portfolio",
+          "description": "Showcase of high-performance custom web applications, SaaS platforms, ERP systems, and restaurant POS technologies engineered by Lightyear Studios.",
+          "url": "https://kravinoffs.agency/software-portfolio",
+          "provider": {
+            "@type": "Organization",
+            "name": "Lightyear Studios"
+          }
+        }}
       />
 
       {/* Saturated Ambient Light Orbs */}

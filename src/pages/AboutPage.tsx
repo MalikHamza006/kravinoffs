@@ -11,9 +11,25 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="pt-28 pb-24 sm:pb-32 min-h-screen bg-obsidian-950 text-chrome-200">
       <SEO
-        title="About Lightyear Studios | Digital Engineering & Creative Production Studio"
-        description="Learn about Lightyear Studios, founded by Hamza Malik. We build modern custom software, produce commercial video up to 4K, and execute digital marketing for Australian and international businesses."
+        title="About Lightyear Studios | Engineering Hub, Studio Provenance & Founder Hamza Malik"
+        description="Lightyear Studios is directed by Hamza Malik, operating from Lahore to deliver high-performance software engineering, 4K commercial video, and digital marketing to Australia and global clients."
         canonical="https://kravinoffs.agency/about"
+        keywords="About Lightyear Studios, Hamza Malik Founder, Australian Digital Agency, Software Engineering Studio, Video Production Agency Australia, Lightyear Studios Team"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Lightyear Studios",
+          "url": "https://kravinoffs.agency/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Lightyear Studios",
+            "founder": {
+              "@type": "Person",
+              "name": "Hamza Malik",
+              "jobTitle": "Founder & Studio Director"
+            }
+          }
+        }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
